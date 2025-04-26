@@ -13,7 +13,7 @@
         .stats-box {
             z-index: 1000;
             position: fixed;
-            top: 80px;
+            top: 20px;
             right: 20px;
             width: 280px;
             background: linear-gradient(145deg, #ffffff, #f1f3f5);
@@ -54,8 +54,8 @@
         }
         .stats-item {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            flex-direction: column;
+            gap: 2px;
             margin-bottom: 10px;
             font-size: 14px;
             color: #2d3436;
@@ -67,10 +67,32 @@
             background: rgba(0, 0, 0, 0.04);
             border-radius: 6px;
         }
-        .stats-item strong {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1a1a1a;
+        .stats-value {
+            margin-left: 24px;
+            font-size: 14px;
+        }
+        .reset-filter {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #2d3436;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+            background: #3498db;
+            color: white;
+            padding: 8px;
+            border-radius: 6px;
+            justify-content: center;
+        }
+        .reset-filter:hover {
+            transform: translateX(4px);
+            background: #2980b9;
+        }
+        .divider {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
         }
         .green { color: #2ecc71; }
         .red { color: #e74c3c; }
@@ -89,12 +111,8 @@
                 width: 90%;
                 max-width: 300px;
                 right: 5%;
-                top: 60px;
+                top: 10px;
             }
-        }
-        .stats-item.active {
-            background: rgba(0, 0, 0, 0.1);
-            font-weight: bold;
         }
     </style>
 </head>
@@ -223,13 +241,17 @@
             const oneMonthAgo = new Date(now - 30 * 24 * 60 * 60 * 1000);
             const currentYear = now.getFullYear();
             let goldenAudits = 0, greenAudits = 0, redAudits = 0, oldAudits = 0, withoutAudits = 0;
+            let latestAudit = { date: null, restaurant: null };
+
             data.forEach(row => {
                 const status = (row['Статус'] || '').toLowerCase().trim();
                 if (status === 'золотой') goldenAudits++;
                 else if (status === 'зеленый' || status === 'зелёный') greenAudits++;
                 else if (status === 'красный') redAudits++;
+
                 const auditDate = row['Дата аудита'] ? new Date(row['Дата аудита']) : null;
                 if (!auditDate || auditDate < oneMonthAgo) oldAudits++;
+
                 let hasAuditInYear = auditDate && auditDate.getFullYear() === currentYear;
                 if (!hasAuditInYear) {
                     let auditNum = 1;
@@ -239,7 +261,13 @@
                             const date = new Date(row[dateCol]);
                             if (date.getFullYear() === currentYear) {
                                 hasAuditInYear = true;
-                                break;
+                            }
+                            // Проверка для последнего аудита
+                            if (date && (!latestAudit.date || date > latestAudit.date)) {
+                                latestAudit = {
+                                    date: date,
+                                    restaurant: row['Название ресторана'] || 'Без названия'
+                                };
                             }
                         } else {
                             break;
@@ -248,18 +276,36 @@
                     }
                 }
                 if (!hasAuditInYear) withoutAudits++;
+
+                // Проверка основного столбца Дата аудита для последнего аудита
+                if (auditDate && (!latestAudit.date || auditDate > latestAudit.date)) {
+                    latestAudit = {
+                        date: auditDate,
+                        restaurant: row['Название ресторана'] || 'Без названия'
+                    };
+                }
             });
+
             const totalAudits = goldenAudits + greenAudits + redAudits;
             const goalPercentage = totalAudits > 0 ? Math.round(((goldenAudits + greenAudits) / totalAudits) * 1000) / 10 : 0;
-            return { goldenAudits, greenAudits, redAudits, oldAudits, goalPercentage, withoutAudits };
+
+            return {
+                goldenAudits,
+                greenAudits,
+                redAudits,
+                oldAudits,
+                goalPercentage,
+                withoutAudits,
+                latestAudit: latestAudit.date ? {
+                    date: formatDate(latestAudit.date),
+                    restaurant: latestAudit.restaurant
+                } : null
+            };
         }
 
         // Фильтрация маркеров
         function filterMarkers(filterType) {
             console.log('Применяем фильтр:', filterType);
-                document.querySelectorAll('.stats-item').forEach(item => item.classList.remove('active'));
-                const activeItem = document.querySelector(`.stats-item[onclick="filterMarkers('${filterType}')"]`);
-                if (activeItem) activeItem.classList.add('active');
             goldenGroup.clearLayers();
             greenGroup.clearLayers();
             redGroup.clearLayers();
@@ -307,17 +353,37 @@
         // Отрисовка блока статистики
         function renderStats(stats) {
             console.log('Отрисовываем статистику:', stats);
+            const latestAuditText = stats.latestAudit
+                ? `${stats.latestAudit.date} (${stats.latestAudit.restaurant})`
+                : 'Нет данных';
             const statsHtml = `
                 <div class="stats-box">
                     <div class="stats-title" onclick="toggleStats()">📊 Статистика аудитов</div>
                     <div class="stats-content">
-                        <div class="stats-item" onclick="filterMarkers('golden')"><span class="gold">⭐</span> Золотые аудиты: <strong>${stats.goldenAudits}</strong></div>
-                        <div class="stats-item" onclick="filterMarkers('green')"><span class="green">✅</span> Зеленые аудиты: <strong>${stats.greenAudits}</strong></div>
-                        <div class="stats-item" onclick="filterMarkers('red')"><span class="red">❌</span> Красные аудиты: <strong>${stats.redAudits}</strong></div>
-                        <div class="stats-item" onclick="filterMarkers('all')"><span class="goal">🎯</span> % в цели: <strong>${stats.goalPercentage}%</strong></div>
-                        <div class="stats-item"><span class="warning">⏳</span> Без аудита > месяца: <strong>${stats.oldAudits}</strong></div>
-                        <div class="stats-item" onclick="filterMarkers('no-audit')"><span class="no-audit">🚫</span> Рестораны без аудита в 2025: <strong>${stats.withoutAudits}</strong></div>
-                        <div class="stats-item"><span class="info">📅</span> Обновлено: <strong style="font-size: 12px;">${new Date().toLocaleString('ru-RU')}</strong></div>
+                        <div class="reset-filter" onclick="filterMarkers('all')"><span class="goal">🌐</span> Показать все рестораны</div>
+                        <div class="stats-item" onclick="filterMarkers('golden')">
+                            <div><span class="gold">⭐</span> Золотые аудиты: ${stats.goldenAudits}</div>
+                        </div>
+                        <div class="stats-item" onclick="filterMarkers('green')">
+                            <div><span class="green">✅</span> Зеленые аудиты: ${stats.greenAudits}</div>
+                        </div>
+                        <div class="stats-item" onclick="filterMarkers('red')">
+                            <div><span class="red">❌</span> Красные аудиты: ${stats.redAudits}</div>
+                        </div>
+                        <div class="stats-item" onclick="filterMarkers('no-audit')">
+                            <div><span class="no-audit">🚫</span> Рестораны без аудита в 2025: ${stats.withoutAudits}</div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="stats-item">
+                            <div><span class="goal">🎯</span> % в цели: ${stats.goalPercentage}%</div>
+                        </div>
+                        <div class="stats-item">
+                            <div><span class="warning">⏳</span> Без аудита > месяца: ${stats.oldAudits}</div>
+                        </div>
+                        <div class="stats-item">
+                            <div><span class="info">🕒</span> Последний аудит:</div>
+                            <div class="stats-value">${latestAuditText}</div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -338,12 +404,11 @@
 
         // Загрузка данных и рендеринг
         let data = []; // Глобальная переменная для хранения данных
-        fetch('/api/restaurants')
-            .then(response => {
+        async function loadData() {
+            try {
+                const response = await fetch('https://restaurant-map.onrender.com/api/restaurants');
                 if (!response.ok) throw new Error('Ошибка HTTP: ' + response.status);
-                return response.json();
-            })
-            .then(fetchedData => {
+                const fetchedData = await response.json();
                 console.log('Полученные данные:', fetchedData);
                 if (!fetchedData || !Array.isArray(fetchedData)) {
                     throw new Error('Данные не являются массивом');
@@ -352,6 +417,10 @@
                     console.log('Ключи первой строки:', Object.keys(fetchedData[0]));
                 }
                 data = fetchedData;
+                goldenGroup.clearLayers();
+                greenGroup.clearLayers();
+                redGroup.clearLayers();
+                grayGroup.clearLayers();
                 data.forEach(row => {
                     const marker = createMarker(row);
                     if (marker) {
@@ -363,9 +432,15 @@
                     }
                 });
                 const stats = calculateStatistics(data);
+                document.querySelector('.stats-box')?.remove();
                 renderStats(stats);
-            })
-            .catch(error => console.error('Ошибка загрузки данных:', error));
+            } catch (error) {
+                console.error('Ошибка загрузки данных:', error);
+            }
+        }
+
+        // Первоначальная загрузка данных
+        loadData();
     </script>
 </body>
 </html>
