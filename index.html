@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта аудитов ресторанов</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:,">
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        #map { height: 100vh; width: 100%; }
+        .stats-box {
+            z-index: 1000;
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            width: 280px;
+            background: linear-gradient(145deg, #ffffff, #f1f3f5);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stats-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        .stats-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3436;
+            padding: 14px 20px;
+            cursor: pointer;
+            background: linear-gradient(145deg, #dfe4ea, #ced4da);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s ease;
+        }
+        .stats-title:hover {
+            background: linear-gradient(145deg, #ced4da, #b0b5b9);
+        }
+        .stats-content {
+            max-height: 0;
+            opacity: 0;
+            padding: 0 20px;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        }
+        .stats-content[style*="max-height"] {
+            padding: 12px 20px;
+        }
+        .stats-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #2d3436;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .stats-item:hover {
+            transform: translateX(4px);
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 6px;
+        }
+        .stats-item strong {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .green { color: #2ecc71; }
+        .red { color: #e74c3c; }
+        .gold { color: #f1c40f; }
+        .goal { color: #3498db; }
+        .warning { color: #e67e22; }
+        .no-audit { color: #7f8c8d; }
+        .info { color: #1abc9c; }
+        .gold-star i {
+            font-size: 18px;
+            color: #ffd700;
+        }
+        .leaflet-control-attribution { display: none; }
+        @media (max-width: 600px) {
+            .stats-box {
+                width: 90%;
+                max-width: 300px;
+                right: 5%;
+                top: 60px;
+            }
+        }
+        .stats-item.active {
+            background: rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Инициализация карты
+        const map = L.map('map').setView([59.832213, 30.251091], 11);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        // Группы слоев
+        const goldenGroup = L.layerGroup().addTo(map);
+        const greenGroup = L.layerGroup().addTo(map);
+        const redGroup = L.layerGroup().addTo(map);
+        const grayGroup = L.layerGroup().addTo(map);
+
+        // Функция для определения цвета
+        function getColor(status) {
+            status = (status || '').toLowerCase().trim();
+            const statusMap = {
+                "зеленый": "green",
+                "зелёный": "green",
+                "красный": "red",
+                "золотой": "gold"
+            };
+            return statusMap[status] || "gray";
+        }
+
+        // Форматирование даты
+        function formatDate(date) {
+            if (!date) return '';
+            try {
+                const d = new Date(date);
+                if (isNaN(d.getTime())) return date;
+                return d.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            } catch (e) {
+                console.warn('Ошибка форматирования даты:', date);
+                return date;
+            }
+        }
+
+        // Создание текста для всплывающего окна
+        function createPopupText(row) {
+            console.log('Обрабатываем строку:', row);
+            const name = row['Название ресторана'] || 'Без названия';
+            let popupText = `<b>${name}</b>`;
+            const audits = [];
+            let auditNum = 1;
+            while (true) {
+                const dateCol = auditNum > 1 ? `Дата аудита ${auditNum}` : 'Дата аудита';
+                const statusCol = auditNum > 1 ? `Статус ${auditNum}` : 'Статус';
+                const auditorCol = auditNum > 1 ? `Аудитор ${auditNum}` : 'Аудитор';
+                const reportCol = auditNum > 1 ? `Отчет ${auditNum}` : 'Отчет';
+                if (row[dateCol]) {
+                    audits.push({
+                        date: row[dateCol],
+                        status: row[statusCol] || 'Нет данных',
+                        auditor: row[auditorCol] || null,
+                        report: row[reportCol] || null
+                    });
+                } else {
+                    break;
+                }
+                auditNum++;
+            }
+            if (!audits.length) {
+                audits.push({ date: null, status: 'Ещё не было аудита в 2025 году', auditor: null, report: null });
+            }
+            audits.forEach(({ date, status, auditor, report }) => {
+                if (date) popupText += `<br><br>Дата аудита: ${formatDate(date)}`;
+                if (status && status !== 'Нет данных') popupText += `<br>Статус: ${status}`;
+                if (auditor) popupText += `<br>Аудитор: ${auditor}`;
+                if (report) popupText += `<br><a href="${report}" target="_blank">Посмотреть отчет</a>`;
+            });
+            if (audits.length > 1) {
+                popupText = `<b>${name} (Аудитов: ${audits.length})</b>` + popupText.slice(`<b>${name}</b>`.length);
+            }
+            return popupText;
+        }
+
+        // Создание маркера
+        function createMarker(row) {
+            const lat = row['Широта'];
+            const lon = row['Долгота'];
+            if (!lat || !lon) {
+                console.warn('Пропущены координаты для:', row);
+                return null;
+            }
+            const name = row['Название ресторана'] || 'Без названия';
+            const color = getColor(row['Статус']);
+            const popupText = createPopupText(row);
+            if (name === "Ульянка Санкт-Петербург") {
+                return L.marker([lat, lon], {
+                    icon: L.divIcon({
+                        className: 'gold-star',
+                        html: `<i class="fas fa-heart" style="color: ${color}"></i>`,
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 12]
+                    })
+                }).bindPopup(popupText);
+            } else if (color === 'gold') {
+                return L.marker([lat, lon], {
+                    icon: L.divIcon({
+                        className: 'gold-star',
+                        html: `<i class="fas fa-star" style="color: gold"></i>`,
+                        iconSize: [24, 24],
+                        iconAnchor: [12, 12]
+                    })
+                }).bindPopup(popupText);
+            } else {
+                return L.circleMarker([lat, lon], {
+                    radius: 8,
+                    color: color,
+                    fillColor: color,
+                    fillOpacity: 0.7,
+                    weight: 1
+                }).bindPopup(popupText);
+            }
+        }
+
+        // Подсчет статистики
+        function calculateStatistics(data) {
+            console.log('Вычисляем статистику для:', data);
+            const now = new Date();
+            const oneMonthAgo = new Date(now - 30 * 24 * 60 * 60 * 1000);
+            const currentYear = now.getFullYear();
+            let goldenAudits = 0, greenAudits = 0, redAudits = 0, oldAudits = 0, withoutAudits = 0;
+            data.forEach(row => {
+                const status = (row['Статус'] || '').toLowerCase().trim();
+                if (status === 'золотой') goldenAudits++;
+                else if (status === 'зеленый' || status === 'зелёный') greenAudits++;
+                else if (status === 'красный') redAudits++;
+                const auditDate = row['Дата аудита'] ? new Date(row['Дата аудита']) : null;
+                if (!auditDate || auditDate < oneMonthAgo) oldAudits++;
+                let hasAuditInYear = auditDate && auditDate.getFullYear() === currentYear;
+                if (!hasAuditInYear) {
+                    let auditNum = 1;
+                    while (true) {
+                        const dateCol = auditNum > 1 ? `Дата аудита ${auditNum}` : 'Дата аудита';
+                        if (row[dateCol]) {
+                            const date = new Date(row[dateCol]);
+                            if (date.getFullYear() === currentYear) {
+                                hasAuditInYear = true;
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                        auditNum++;
+                    }
+                }
+                if (!hasAuditInYear) withoutAudits++;
+            });
+            const totalAudits = goldenAudits + greenAudits + redAudits;
+            const goalPercentage = totalAudits > 0 ? Math.round(((goldenAudits + greenAudits) / totalAudits) * 1000) / 10 : 0;
+            return { goldenAudits, greenAudits, redAudits, oldAudits, goalPercentage, withoutAudits };
+        }
+
+        // Фильтрация маркеров
+        function filterMarkers(filterType) {
+            console.log('Применяем фильтр:', filterType);
+                document.querySelectorAll('.stats-item').forEach(item => item.classList.remove('active'));
+                const activeItem = document.querySelector(`.stats-item[onclick="filterMarkers('${filterType}')"]`);
+                if (activeItem) activeItem.classList.add('active');
+            goldenGroup.clearLayers();
+            greenGroup.clearLayers();
+            redGroup.clearLayers();
+            grayGroup.clearLayers();
+            data.forEach(row => {
+                const marker = createMarker(row);
+                if (!marker) return;
+                const color = getColor(row['Статус']);
+                const auditDate = row['Дата аудита'] ? new Date(row['Дата аудита']) : null;
+                const currentYear = new Date().getFullYear();
+                let hasAuditInYear = auditDate && auditDate.getFullYear() === currentYear;
+                if (!hasAuditInYear) {
+                    let auditNum = 1;
+                    while (true) {
+                        const dateCol = auditNum > 1 ? `Дата аудита ${auditNum}` : 'Дата аудита';
+                        if (row[dateCol]) {
+                            const date = new Date(row[dateCol]);
+                            if (date.getFullYear() === currentYear) {
+                                hasAuditInYear = true;
+                                break;
+                            }
+                        } else {
+                            break;
+                        }
+                        auditNum++;
+                    }
+                }
+                if (filterType === 'all') {
+                    if (color === 'gold') marker.addTo(goldenGroup);
+                    else if (color === 'green') marker.addTo(greenGroup);
+                    else if (color === 'red') marker.addTo(redGroup);
+                    else marker.addTo(grayGroup);
+                } else if (filterType === 'golden' && color === 'gold') {
+                    marker.addTo(goldenGroup);
+                } else if (filterType === 'green' && color === 'green') {
+                    marker.addTo(greenGroup);
+                } else if (filterType === 'red' && color === 'red') {
+                    marker.addTo(redGroup);
+                } else if (filterType === 'no-audit' && !hasAuditInYear) {
+                    marker.addTo(grayGroup);
+                }
+            });
+        }
+
+        // Отрисовка блока статистики
+        function renderStats(stats) {
+            console.log('Отрисовываем статистику:', stats);
+            const statsHtml = `
+                <div class="stats-box">
+                    <div class="stats-title" onclick="toggleStats()">📊 Статистика аудитов</div>
+                    <div class="stats-content">
+                        <div class="stats-item" onclick="filterMarkers('golden')"><span class="gold">⭐</span> Золотые аудиты: <strong>${stats.goldenAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('green')"><span class="green">✅</span> Зеленые аудиты: <strong>${stats.greenAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('red')"><span class="red">❌</span> Красные аудиты: <strong>${stats.redAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('all')"><span class="goal">🎯</span> % в цели: <strong>${stats.goalPercentage}%</strong></div>
+                        <div class="stats-item"><span class="warning">⏳</span> Без аудита > месяца: <strong>${stats.oldAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('no-audit')"><span class="no-audit">🚫</span> Рестораны без аудита в 2025: <strong>${stats.withoutAudits}</strong></div>
+                        <div class="stats-item"><span class="info">📅</span> Обновлено: <strong style="font-size: 12px;">${new Date().toLocaleString('ru-RU')}</strong></div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', statsHtml);
+        }
+
+        // Функция переключения видимости статистики
+        function toggleStats() {
+            const content = document.querySelector(".stats-content");
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.opacity = 0;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.style.opacity = 1;
+            }
+        }
+
+        // Загрузка данных и рендеринг
+        let data = []; // Глобальная переменная для хранения данных
+        fetch('/api/restaurants')
+            .then(response => {
+                if (!response.ok) throw new Error('Ошибка HTTP: ' + response.status);
+                return response.json();
+            })
+            .then(fetchedData => {
+                console.log('Полученные данные:', fetchedData);
+                if (!fetchedData || !Array.isArray(fetchedData)) {
+                    throw new Error('Данные не являются массивом');
+                }
+                if (fetchedData.length > 0) {
+                    console.log('Ключи первой строки:', Object.keys(fetchedData[0]));
+                }
+                data = fetchedData;
+                data.forEach(row => {
+                    const marker = createMarker(row);
+                    if (marker) {
+                        const color = getColor(row['Статус']);
+                        if (color === 'green') marker.addTo(greenGroup);
+                        else if (color === 'red') marker.addTo(redGroup);
+                        else if (color === 'gold') marker.addTo(goldenGroup);
+                        else marker.addTo(grayGroup);
+                    }
+                });
+                const stats = calculateStatistics(data);
+                renderStats(stats);
+            })
+            .catch(error => console.error('Ошибка загрузки данных:', error));
+    </script>
+</body>
+</html>

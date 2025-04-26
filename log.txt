@@ -1,0 +1,133 @@
+2025-04-26 17:05:22,574 - WARNING -  * Debugger is active!
+2025-04-26 17:05:22,577 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:05:31,051 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:05:31,051 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:05:31,052 - INFO -  * Restarting with stat
+2025-04-26 17:05:31,591 - WARNING -  * Debugger is active!
+2025-04-26 17:05:31,593 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:05:33,363 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:33] "GET / HTTP/1.1" 200 -
+2025-04-26 17:05:33,556 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:33,561 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:33] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:37,872 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:37,875 - INFO - 127.0.0.1 - - [26/Apr/2025 17:05:37] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:48,625 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:48] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:05:48,663 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:48,666 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:48] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:49,461 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:49] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:05:49,500 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:49,504 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:49] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:49,875 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:49] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:05:49,914 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:49,919 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:49] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:50,074 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:05:50,142 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:50,146 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:50] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:05:50,250 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:05:50,391 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:05:50,394 - INFO - 192.168.31.31 - - [26/Apr/2025 17:05:50] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:06:34,796 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:06:34,796 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:06:34,797 - INFO -  * Restarting with stat
+2025-04-26 17:06:35,292 - WARNING -  * Debugger is active!
+2025-04-26 17:06:35,294 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:06:40,260 - INFO - 127.0.0.1 - - [26/Apr/2025 17:06:40] "GET / HTTP/1.1" 200 -
+2025-04-26 17:06:40,445 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:06:40,449 - INFO - 127.0.0.1 - - [26/Apr/2025 17:06:40] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:08:48,357 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:08:48,358 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:08:48,359 - INFO -  * Restarting with stat
+2025-04-26 17:08:48,884 - WARNING -  * Debugger is active!
+2025-04-26 17:08:48,887 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:08:50,542 - INFO - 127.0.0.1 - - [26/Apr/2025 17:08:50] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:08:50,739 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:08:50,759 - INFO - 127.0.0.1 - - [26/Apr/2025 17:08:50] "[35m[1mGET /api/restaurants HTTP/1.1[0m" 500 -
+2025-04-26 17:09:13,825 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:09:13,843 - INFO - 127.0.0.1 - - [26/Apr/2025 17:09:13] "[35m[1mGET /api/restaurants HTTP/1.1[0m" 500 -
+2025-04-26 17:09:13,860 - INFO - 127.0.0.1 - - [26/Apr/2025 17:09:13] "GET /api/restaurants?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-26 17:09:13,860 - INFO - 127.0.0.1 - - [26/Apr/2025 17:09:13] "GET /api/restaurants?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-26 17:09:13,898 - INFO - 127.0.0.1 - - [26/Apr/2025 17:09:13] "GET /api/restaurants?__debugger__=yes&cmd=resource&f=console.png&s=sfWjJqmqAvk1VNCFeUHV HTTP/1.1" 200 -
+2025-04-26 17:09:13,954 - INFO - 127.0.0.1 - - [26/Apr/2025 17:09:13] "GET /api/restaurants?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-26 17:11:15,886 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:11:15,887 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:11:15,888 - INFO -  * Restarting with stat
+2025-04-26 17:11:16,396 - WARNING -  * Debugger is active!
+2025-04-26 17:11:16,399 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:11:28,538 - INFO - 127.0.0.1 - - [26/Apr/2025 17:11:28] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:11:28,770 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:11:28,775 - INFO - 127.0.0.1 - - [26/Apr/2025 17:11:28] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:12:15,805 - INFO - 127.0.0.1 - - [26/Apr/2025 17:12:15] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:12:15,884 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:12:15,886 - INFO - 127.0.0.1 - - [26/Apr/2025 17:12:15] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:15:52,692 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:15:52,692 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:15:52,693 - INFO -  * Restarting with stat
+2025-04-26 17:15:53,201 - WARNING -  * Debugger is active!
+2025-04-26 17:15:53,204 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:15:56,429 - INFO - 192.168.31.31 - - [26/Apr/2025 17:15:56] "GET / HTTP/1.1" 200 -
+2025-04-26 17:15:56,630 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:15:56,636 - INFO - 192.168.31.31 - - [26/Apr/2025 17:15:56] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:16:55,182 - INFO - 192.168.31.31 - - [26/Apr/2025 17:16:55] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 17:16:55,217 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:16:55,221 - INFO - 192.168.31.31 - - [26/Apr/2025 17:16:55] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:20:17,472 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:20:17,472 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:20:17,473 - INFO -  * Restarting with stat
+2025-04-26 17:20:17,963 - WARNING -  * Debugger is active!
+2025-04-26 17:20:17,965 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:20:21,293 - INFO - 192.168.31.31 - - [26/Apr/2025 17:20:21] "GET / HTTP/1.1" 200 -
+2025-04-26 17:20:21,466 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:20:21,473 - INFO - 192.168.31.31 - - [26/Apr/2025 17:20:21] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:21:13,373 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:21:13,373 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:21:13,374 - INFO -  * Restarting with stat
+2025-04-26 17:21:13,889 - WARNING -  * Debugger is active!
+2025-04-26 17:21:13,892 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:21:16,077 - INFO - 192.168.31.31 - - [26/Apr/2025 17:21:16] "GET / HTTP/1.1" 200 -
+2025-04-26 17:21:16,232 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:21:16,239 - INFO - 192.168.31.31 - - [26/Apr/2025 17:21:16] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:24:45,967 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:24:45,967 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:24:45,968 - INFO -  * Restarting with stat
+2025-04-26 17:24:46,477 - WARNING -  * Debugger is active!
+2025-04-26 17:24:46,479 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:24:49,641 - INFO - 192.168.31.31 - - [26/Apr/2025 17:24:49] "GET / HTTP/1.1" 200 -
+2025-04-26 17:24:49,805 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:24:49,811 - INFO - 192.168.31.31 - - [26/Apr/2025 17:24:49] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 17:28:37,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.31:5000
+2025-04-26 17:28:37,613 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-26 17:28:37,614 - INFO -  * Restarting with stat
+2025-04-26 17:28:38,108 - WARNING -  * Debugger is active!
+2025-04-26 17:28:38,110 - INFO -  * Debugger PIN: 868-084-893
+2025-04-26 17:28:41,125 - INFO - 192.168.31.31 - - [26/Apr/2025 17:28:41] "GET / HTTP/1.1" 200 -
+2025-04-26 17:28:41,285 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 17:28:41,290 - INFO - 192.168.31.31 - - [26/Apr/2025 17:28:41] "GET /api/restaurants HTTP/1.1" 200 -
+2025-04-26 18:31:24,049 - INFO - 192.168.31.31 - - [26/Apr/2025 18:31:24] "[36mGET / HTTP/1.1[0m" 304 -
+2025-04-26 18:31:24,116 - INFO - Данные успешно прочитаны из файла restaurants.xlsx
+2025-04-26 18:31:24,120 - INFO - 192.168.31.31 - - [26/Apr/2025 18:31:24] "GET /api/restaurants HTTP/1.1" 200 -
