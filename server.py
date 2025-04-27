@@ -7,7 +7,7 @@ import sys
 import os
 
 app = Flask(__name__)
-CORS(app)  # Включаем CORS для поддержки запросов с локального index.html
+CORS(app)
 
 # Настройка логирования
 logging.basicConfig(
@@ -16,30 +16,42 @@ logging.basicConfig(
     handlers=[
         logging.FileHandler('log.txt', encoding='utf-8'),
         logging.StreamHandler(sys.stdout)
-    ],
-    encoding='utf-8'
+    ]
 )
 
 # Конфигурация из файла
 try:
-    with open('config.json') as config_file:
+    with open('config.json', encoding='utf-8') as config_file:
         config = json.load(config_file)
 except FileNotFoundError:
     logging.error("Файл config.json не найден")
     config = {"file_path": "restaurants.xlsx"}
 
+def safe_date_conversion(df, col):
+    """
+    Безопасное преобразование столбца с датами в формат ISO.
+    """
+    try:
+        df[col] = pd.to_datetime(df[col], errors='coerce')
+        df[col] = df[col].apply(lambda x: x.strftime('%Y-%m-%d') if pd.notnull(x) else None)
+        logging.info(f"Столбец '{col}' успешно преобразован в формат ISO.")
+    except Exception as e:
+        logging.error(f"Ошибка при преобразовании столбца '{col}': {e}")
+
 def read_excel_data(file_path):
     """
     Читает данные из Excel-файла.
-
-    Args:
-        file_path (str): Путь к файлу Excel.
-
-    Returns:
-        pandas.DataFrame: Данные из файла.
     """
     try:
-        df = pd.read_excel(file_path)
+        df = pd.read_excel(file_path, engine='openpyxl')
+
+        for col in df.columns:
+            if 'Дата аудита' in col:
+                safe_date_conversion(df, col)
+
+        # Корректная замена NaN на None
+        df = df.where(pd.notnull(df), None)
+
         logging.info("Данные успешно прочитаны из файла %s", file_path)
         return df
     except FileNotFoundError:
@@ -51,20 +63,22 @@ def read_excel_data(file_path):
 
 @app.route('/api/restaurants')
 def get_restaurants():
+    """
+    Возвращает данные из restaurants.xlsx в формате JSON.
+    """
     try:
-        # Убедитесь, что файл находится в корне
-        if not os.path.exists('restaurants.xlsx'):
-            return jsonify({'error': 'File restaurants.xlsx not found'}), 500
-        df = pd.read_excel('restaurants.xlsx', engine='openpyxl')
-        # Приведение дат к строковому формату ISO
-        for col in df.columns:
-            if 'Дата аудита' in col:
-                df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%d')
+        file_path = config.get('file_path', 'restaurants.xlsx')
+        df = read_excel_data(file_path)
+        if df is None:
+            return jsonify({'error': f'Не удалось прочитать файл {file_path}'}), 500
+
+        logging.info("Первые 5 строк DataFrame перед преобразованием в JSON:\n%s", df.head().to_string())
+
         data = df.to_dict(orient='records')
-        print('Data loaded:', data)  # Отладка
+        logging.info("Отправлено %d записей", len(data))
         return jsonify(data)
     except Exception as e:
-        print('Error:', str(e))  # Отладка
+        logging.error("Ошибка в /api/restaurants: %s", str(e))
         return jsonify({'error': str(e)}), 500
 
 @app.route('/')
@@ -87,5 +101,6 @@ def favicon():
         return send_file('favicon.ico')
     return '', 204
 
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
