@@ -434,7 +434,8 @@
         let data = []; // Глобальная переменная для хранения данных
         async function loadData() {
             try {
-                const response = await fetch('https://restaurant-map.onrender.com/api/restaurants');
+                const apiBaseUrl = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1')? '': 'https://restaurant-map.onrender.com';
+                const response = await fetch(`${apiBaseUrl}/api/restaurants`);
                 if (!response.ok) throw new Error('Ошибка HTTP: ' + response.status);
                 const fetchedData = await response.json();
                 console.log('Полученные данные:', fetchedData);
