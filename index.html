@@ -54,8 +54,8 @@
         }
         .stats-item {
             display: flex;
-            flex-direction: column;
-            gap: 2px;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 10px;
             font-size: 14px;
             color: #2d3436;
@@ -67,9 +67,10 @@
             background: rgba(0, 0, 0, 0.04);
             border-radius: 6px;
         }
-        .stats-value {
-            margin-left: 24px;
-            font-size: 14px;
+        .stats-item strong {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
         }
         .reset-filter {
             display: flex;
@@ -89,6 +90,37 @@
         .reset-filter:hover {
             transform: translateX(4px);
             background: #2980b9;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #2d3436;
+        }
+        .info-item strong {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .latest-audit {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #2d3436;
+        }
+        .latest-audit strong {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        .latest-audit ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
         }
         .divider {
             border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -241,7 +273,7 @@
             const oneMonthAgo = new Date(now - 30 * 24 * 60 * 60 * 1000);
             const currentYear = now.getFullYear();
             let goldenAudits = 0, greenAudits = 0, redAudits = 0, oldAudits = 0, withoutAudits = 0;
-            let latestAudit = { date: null, restaurant: null };
+            const auditDates = {};
 
             data.forEach(row => {
                 const status = (row['Статус'] || '').toLowerCase().trim();
@@ -262,12 +294,10 @@
                             if (date.getFullYear() === currentYear) {
                                 hasAuditInYear = true;
                             }
-                            // Проверка для последнего аудита
-                            if (date && (!latestAudit.date || date > latestAudit.date)) {
-                                latestAudit = {
-                                    date: date,
-                                    restaurant: row['Название ресторана'] || 'Без названия'
-                                };
+                            if (date && !isNaN(date.getTime())) {
+                                const dateStr = formatDate(date);
+                                if (!auditDates[dateStr]) auditDates[dateStr] = [];
+                                auditDates[dateStr].push(row['Название ресторана'] || 'Без названия');
                             }
                         } else {
                             break;
@@ -277,15 +307,23 @@
                 }
                 if (!hasAuditInYear) withoutAudits++;
 
-                // Проверка основного столбца Дата аудита для последнего аудита
-                if (auditDate && (!latestAudit.date || auditDate > latestAudit.date)) {
-                    latestAudit = {
-                        date: auditDate,
-                        restaurant: row['Название ресторана'] || 'Без названия'
-                    };
+                if (auditDate && !isNaN(auditDate.getTime())) {
+                    const dateStr = formatDate(auditDate);
+                    if (!auditDates[dateStr]) auditDates[dateStr] = [];
+                    auditDates[dateStr].push(row['Название ресторана'] || 'Без названия');
                 }
             });
 
+            const latestAudits = Object.keys(auditDates)
+                .map(dateStr => ({
+                    date: new Date(dateStr.split('.').reverse().join('-')),
+                    formattedDate: dateStr,
+                    restaurants: auditDates[dateStr]
+                }))
+                .filter(audit => !isNaN(audit.date.getTime()))
+                .sort((a, b) => b.date - a.date)
+                .slice(0, 2); // Ограничиваем до двух последних дат
+            console.log('auditDates:', auditDates);
             const totalAudits = goldenAudits + greenAudits + redAudits;
             const goalPercentage = totalAudits > 0 ? Math.round(((goldenAudits + greenAudits) / totalAudits) * 1000) / 10 : 0;
 
@@ -296,10 +334,7 @@
                 oldAudits,
                 goalPercentage,
                 withoutAudits,
-                latestAudit: latestAudit.date ? {
-                    date: formatDate(latestAudit.date),
-                    restaurant: latestAudit.restaurant
-                } : null
+                latestAudits
             };
         }
 
@@ -353,36 +388,29 @@
         // Отрисовка блока статистики
         function renderStats(stats) {
             console.log('Отрисовываем статистику:', stats);
-            const latestAuditText = stats.latestAudit
-                ? `${stats.latestAudit.date} (${stats.latestAudit.restaurant})`
-                : 'Нет данных';
+            const latestAuditsHtml = stats.latestAudits && stats.latestAudits.length > 0
+                ? stats.latestAudits.map(audit => `
+                    <strong>${audit.formattedDate}</strong>
+                    <ul>
+                        ${audit.restaurants.map(restaurant => `<li>${restaurant}</li>`).join('')}
+                    </ul>
+                `).join('')
+                : '<strong>Нет данных</strong>';
             const statsHtml = `
                 <div class="stats-box">
                     <div class="stats-title" onclick="toggleStats()">📊 Статистика аудитов</div>
                     <div class="stats-content">
                         <div class="reset-filter" onclick="filterMarkers('all')"><span class="goal">🌐</span> Показать все рестораны</div>
-                        <div class="stats-item" onclick="filterMarkers('golden')">
-                            <div><span class="gold">⭐</span> Золотые аудиты: ${stats.goldenAudits}</div>
-                        </div>
-                        <div class="stats-item" onclick="filterMarkers('green')">
-                            <div><span class="green">✅</span> Зеленые аудиты: ${stats.greenAudits}</div>
-                        </div>
-                        <div class="stats-item" onclick="filterMarkers('red')">
-                            <div><span class="red">❌</span> Красные аудиты: ${stats.redAudits}</div>
-                        </div>
-                        <div class="stats-item" onclick="filterMarkers('no-audit')">
-                            <div><span class="no-audit">🚫</span> Рестораны без аудита в 2025: ${stats.withoutAudits}</div>
-                        </div>
+                        <div class="stats-item" onclick="filterMarkers('golden')"><span class="gold">⭐</span> Золотые аудиты: <strong>${stats.goldenAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('green')"><span class="green">✅</span> Зеленые аудиты: <strong>${stats.greenAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('red')"><span class="red">❌</span> Красные аудиты: <strong>${stats.redAudits}</strong></div>
+                        <div class="stats-item" onclick="filterMarkers('no-audit')"><span class="no-audit">🚫</span> Рестораны без аудита в 2025: <strong>${stats.withoutAudits}</strong></div>
                         <div class="divider"></div>
-                        <div class="stats-item">
-                            <div><span class="goal">🎯</span> % в цели: ${stats.goalPercentage}%</div>
-                        </div>
-                        <div class="stats-item">
-                            <div><span class="warning">⏳</span> Без аудита > месяца: ${stats.oldAudits}</div>
-                        </div>
-                        <div class="stats-item">
-                            <div><span class="info">🕒</span> Последний аудит:</div>
-                            <div class="stats-value">${latestAuditText}</div>
+                        <div class="info-item"><span class="goal">🎯</span> % в цели: <strong>${stats.goalPercentage}%</strong></div>
+                        <div class="info-item"><span class="warning">⏳</span> Без аудита > месяца: <strong>${stats.oldAudits}</strong></div>
+                        <div class="latest-audit">
+                            <span class="info">🕒</span> Последние аудиты:
+                            ${latestAuditsHtml}
                         </div>
                     </div>
                 </div>

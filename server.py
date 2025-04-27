@@ -65,8 +65,8 @@ def get_restaurants():
     date_columns = [col for col in df.columns if 'Дата аудита' in col]
     for col in date_columns:
         df[col] = df[col].apply(lambda x: x.isoformat() if pd.notna(x) else None)
-    # Заменяем NaN на None для корректной сериализации в JSON
-    df = df.where(df.notna(), None)
+    # Заменяем NaN на null
+    df = df.fillna(value=None)
     # Возвращаем JSON без экранирования Unicode
     return app.response_class(
         response=json.dumps(df.to_dict(orient='records'), ensure_ascii=False),
