@@ -49,29 +49,23 @@ def read_excel_data(file_path):
         logging.error("Ошибка при чтении файла: %s", e)
         return None
 
-@app.route('/api/restaurants', methods=['GET'])
+@app.route('/api/restaurants')
 def get_restaurants():
-    """
-    API-эндпоинт для получения данных ресторанов.
-
-    Returns:
-        JSON: Данные из Excel-файла.
-    """
-    file_path = config.get("file_path", "restaurants.xlsx")
-    df = read_excel_data(file_path)
-    if df is None:
-        return jsonify({"error": "Не удалось загрузить данные"}), 500
-    # Конвертация дат в ISO-формат для JSON
-    date_columns = [col for col in df.columns if 'Дата аудита' in col]
-    for col in date_columns:
-        df[col] = df[col].apply(lambda x: x.isoformat() if pd.notna(x) else None)
-    # Заменяем NaN на null
-    df = df.fillna(value=None)
-    # Возвращаем JSON без экранирования Unicode
-    return app.response_class(
-        response=json.dumps(df.to_dict(orient='records'), ensure_ascii=False),
-        mimetype='application/json'
-    )
+    try:
+        # Убедитесь, что файл находится в корне
+        if not os.path.exists('restaurants.xlsx'):
+            return jsonify({'error': 'File restaurants.xlsx not found'}), 500
+        df = pd.read_excel('restaurants.xlsx', engine='openpyxl')
+        # Приведение дат к строковому формату ISO
+        for col in df.columns:
+            if 'Дата аудита' in col:
+                df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%d')
+        data = df.to_dict(orient='records')
+        print('Data loaded:', data)  # Отладка
+        return jsonify(data)
+    except Exception as e:
+        print('Error:', str(e))  # Отладка
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/')
 def serve_index():
