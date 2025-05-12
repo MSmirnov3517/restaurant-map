@@ -1,23 +1,51 @@
-name: Deploy to Server
+name: Deploy Restaurant Map to Server
 
 on:
   push:
     branches:
-      - main  # Замените на вашу рабочую ветку
+      - master  # Триггер при пуше в ветку master
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    
+    runs-on: ubuntu-latest # Используем стандартный раннер GitHub
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3 # Получаем код из репозитория
 
       - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
+        uses: webfactory/ssh-agent@v0.5.4 # Настраиваем SSH-агент с ключом из секрета
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.MSL2025_VPS }} # Используем твой секрет
 
       - name: Deploy to server
         run: |
-          ssh user@your-server "cd /path/to/your/project && git pull origin main && npm install && npm run build"
+          # Подключаемся к серверу и выполняем команды
+          # -o StrictHostKeyChecking=no - автоматически добавляет ключ хоста в known_hosts
+          ssh -o StrictHostKeyChecking=no root@5.35.125.204 << 'EOF'
+            
+            # 1. Переходим в директорию проекта
+            echo "--> Navigating to project directory..."
+            cd /root/restaurant-map
+            
+            # 2. Активируем виртуальное окружение Python
+            # Убедись, что путь /root/restaurant-map/venv-py310/bin/activate верный!
+            echo "--> Activating Python virtual environment..."
+            source /root/restaurant-map/venv-py310/bin/activate
+            
+            # 3. Получаем последние изменения из ветки master
+            echo "--> Pulling latest changes from master branch..."
+            git pull origin master
+            
+            # 4. Установка зависимостей пропущена согласно твоему запросу
+            # Если понадобится в будущем, раскомментируй строку ниже:
+            # echo "--> Installing dependencies (if needed)..."
+            # pip install -r requirements.txt
+            
+            # 5. Перезапускаем сервис приложения через systemd
+            # Убедись, что имя сервиса 'restaurant-map.service' правильное!
+            echo "--> Restarting the application service via systemd..."
+            sudo systemctl restart restaurant-map.service 
+            
+            echo "--> Deployment finished successfully!"
+          EOF
