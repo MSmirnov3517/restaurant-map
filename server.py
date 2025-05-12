@@ -8,7 +8,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-#Строка для теста
+#Строка для теста. часть вторая
 # Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
