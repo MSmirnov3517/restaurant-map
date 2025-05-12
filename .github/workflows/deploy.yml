@@ -1,0 +1,35 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master  # Запускать workflow только при пуше в ветку master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Checkout кода
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Шаг 2: Установка SSH-ключа
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan 5.35.125.204 >> ~/.ssh/known_hosts
+
+      # Шаг 3: Подключение к серверу и обновление репозитория
+      - name: Deploy to server
+        run: |
+          ssh root@5.35.125.204 <<EOF
+          cd /var/www/restaurant-map/restaurant-map
+          git pull origin master
+          source venv/bin/activate
+          pip install -r requirements.txt
+          python server.py  # Запуск вашего Python-скрипта
+          sudo systemctl restart gunicorn
+          EOF

@@ -1,0 +1,860 @@
+-- Logs begin at Mon 2025-05-12 08:12:30 BST, end at Mon 2025-05-12 10:15:51 BST. --
+May 12 10:09:34 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:09:34 msl2025.com gunicorn[18691]: [2025-05-12 10:09:34 +0100] [18691] [INFO] Starting gunicorn 23.0.0
+May 12 10:09:34 msl2025.com gunicorn[18691]: [2025-05-12 10:09:34 +0100] [18691] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:34 msl2025.com gunicorn[18691]: [2025-05-12 10:09:34 +0100] [18691] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:35 msl2025.com gunicorn[18691]: [2025-05-12 10:09:35 +0100] [18691] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:35 msl2025.com gunicorn[18691]: [2025-05-12 10:09:35 +0100] [18691] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:36 msl2025.com gunicorn[18691]: [2025-05-12 10:09:36 +0100] [18691] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:36 msl2025.com gunicorn[18691]: [2025-05-12 10:09:36 +0100] [18691] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:37 msl2025.com gunicorn[18691]: [2025-05-12 10:09:37 +0100] [18691] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:37 msl2025.com gunicorn[18691]: [2025-05-12 10:09:37 +0100] [18691] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:38 msl2025.com gunicorn[18691]: [2025-05-12 10:09:38 +0100] [18691] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:38 msl2025.com gunicorn[18691]: [2025-05-12 10:09:38 +0100] [18691] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:39 msl2025.com gunicorn[18691]: [2025-05-12 10:09:39 +0100] [18691] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:09:39 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:09:39 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:09:39 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 1.
+May 12 10:09:39 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:09:39 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:09:39 msl2025.com gunicorn[18714]: [2025-05-12 10:09:39 +0100] [18714] [INFO] Starting gunicorn 23.0.0
+May 12 10:09:39 msl2025.com gunicorn[18714]: [2025-05-12 10:09:39 +0100] [18714] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:39 msl2025.com gunicorn[18714]: [2025-05-12 10:09:39 +0100] [18714] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:40 msl2025.com gunicorn[18714]: [2025-05-12 10:09:40 +0100] [18714] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:40 msl2025.com gunicorn[18714]: [2025-05-12 10:09:40 +0100] [18714] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:41 msl2025.com gunicorn[18714]: [2025-05-12 10:09:41 +0100] [18714] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:41 msl2025.com gunicorn[18714]: [2025-05-12 10:09:41 +0100] [18714] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:42 msl2025.com gunicorn[18714]: [2025-05-12 10:09:42 +0100] [18714] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:42 msl2025.com gunicorn[18714]: [2025-05-12 10:09:42 +0100] [18714] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:43 msl2025.com gunicorn[18714]: [2025-05-12 10:09:43 +0100] [18714] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:43 msl2025.com gunicorn[18714]: [2025-05-12 10:09:43 +0100] [18714] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:44 msl2025.com gunicorn[18714]: [2025-05-12 10:09:44 +0100] [18714] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:09:44 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:09:44 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:09:44 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 2.
+May 12 10:09:44 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:09:44 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:09:44 msl2025.com gunicorn[18742]: [2025-05-12 10:09:44 +0100] [18742] [INFO] Starting gunicorn 23.0.0
+May 12 10:09:44 msl2025.com gunicorn[18742]: [2025-05-12 10:09:44 +0100] [18742] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:44 msl2025.com gunicorn[18742]: [2025-05-12 10:09:44 +0100] [18742] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:45 msl2025.com gunicorn[18742]: [2025-05-12 10:09:45 +0100] [18742] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:45 msl2025.com gunicorn[18742]: [2025-05-12 10:09:45 +0100] [18742] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:46 msl2025.com gunicorn[18742]: [2025-05-12 10:09:46 +0100] [18742] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:46 msl2025.com gunicorn[18742]: [2025-05-12 10:09:46 +0100] [18742] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:47 msl2025.com gunicorn[18742]: [2025-05-12 10:09:47 +0100] [18742] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:47 msl2025.com gunicorn[18742]: [2025-05-12 10:09:47 +0100] [18742] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:48 msl2025.com gunicorn[18742]: [2025-05-12 10:09:48 +0100] [18742] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:48 msl2025.com gunicorn[18742]: [2025-05-12 10:09:48 +0100] [18742] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:49 msl2025.com gunicorn[18742]: [2025-05-12 10:09:49 +0100] [18742] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:09:49 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:09:49 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:09:49 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 3.
+May 12 10:09:49 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:09:49 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:09:49 msl2025.com gunicorn[18757]: [2025-05-12 10:09:49 +0100] [18757] [INFO] Starting gunicorn 23.0.0
+May 12 10:09:49 msl2025.com gunicorn[18757]: [2025-05-12 10:09:49 +0100] [18757] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:49 msl2025.com gunicorn[18757]: [2025-05-12 10:09:49 +0100] [18757] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:50 msl2025.com gunicorn[18757]: [2025-05-12 10:09:50 +0100] [18757] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:50 msl2025.com gunicorn[18757]: [2025-05-12 10:09:50 +0100] [18757] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:51 msl2025.com gunicorn[18757]: [2025-05-12 10:09:51 +0100] [18757] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:51 msl2025.com gunicorn[18757]: [2025-05-12 10:09:51 +0100] [18757] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:52 msl2025.com gunicorn[18757]: [2025-05-12 10:09:52 +0100] [18757] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:52 msl2025.com gunicorn[18757]: [2025-05-12 10:09:52 +0100] [18757] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:53 msl2025.com gunicorn[18757]: [2025-05-12 10:09:53 +0100] [18757] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:53 msl2025.com gunicorn[18757]: [2025-05-12 10:09:53 +0100] [18757] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:54 msl2025.com gunicorn[18757]: [2025-05-12 10:09:54 +0100] [18757] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:09:54 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:09:54 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:09:55 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 4.
+May 12 10:09:55 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:09:55 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:09:55 msl2025.com gunicorn[18769]: [2025-05-12 10:09:55 +0100] [18769] [INFO] Starting gunicorn 23.0.0
+May 12 10:09:55 msl2025.com gunicorn[18769]: [2025-05-12 10:09:55 +0100] [18769] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:55 msl2025.com gunicorn[18769]: [2025-05-12 10:09:55 +0100] [18769] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:56 msl2025.com gunicorn[18769]: [2025-05-12 10:09:56 +0100] [18769] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:56 msl2025.com gunicorn[18769]: [2025-05-12 10:09:56 +0100] [18769] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:57 msl2025.com gunicorn[18769]: [2025-05-12 10:09:57 +0100] [18769] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:57 msl2025.com gunicorn[18769]: [2025-05-12 10:09:57 +0100] [18769] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:58 msl2025.com gunicorn[18769]: [2025-05-12 10:09:58 +0100] [18769] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:58 msl2025.com gunicorn[18769]: [2025-05-12 10:09:58 +0100] [18769] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:09:59 msl2025.com gunicorn[18769]: [2025-05-12 10:09:59 +0100] [18769] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:09:59 msl2025.com gunicorn[18769]: [2025-05-12 10:09:59 +0100] [18769] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:00 msl2025.com gunicorn[18769]: [2025-05-12 10:10:00 +0100] [18769] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:00 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:00 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:00 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 5.
+May 12 10:10:00 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:00 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:00 msl2025.com gunicorn[18781]: [2025-05-12 10:10:00 +0100] [18781] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:00 msl2025.com gunicorn[18781]: [2025-05-12 10:10:00 +0100] [18781] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:00 msl2025.com gunicorn[18781]: [2025-05-12 10:10:00 +0100] [18781] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:01 msl2025.com gunicorn[18781]: [2025-05-12 10:10:01 +0100] [18781] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:01 msl2025.com gunicorn[18781]: [2025-05-12 10:10:01 +0100] [18781] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:02 msl2025.com gunicorn[18781]: [2025-05-12 10:10:02 +0100] [18781] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:02 msl2025.com gunicorn[18781]: [2025-05-12 10:10:02 +0100] [18781] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:03 msl2025.com gunicorn[18781]: [2025-05-12 10:10:03 +0100] [18781] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:03 msl2025.com gunicorn[18781]: [2025-05-12 10:10:03 +0100] [18781] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:04 msl2025.com gunicorn[18781]: [2025-05-12 10:10:04 +0100] [18781] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:04 msl2025.com gunicorn[18781]: [2025-05-12 10:10:04 +0100] [18781] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:05 msl2025.com gunicorn[18781]: [2025-05-12 10:10:05 +0100] [18781] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:05 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:05 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:05 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 6.
+May 12 10:10:05 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:05 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:05 msl2025.com gunicorn[18793]: [2025-05-12 10:10:05 +0100] [18793] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:05 msl2025.com gunicorn[18793]: [2025-05-12 10:10:05 +0100] [18793] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:05 msl2025.com gunicorn[18793]: [2025-05-12 10:10:05 +0100] [18793] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:06 msl2025.com gunicorn[18793]: [2025-05-12 10:10:06 +0100] [18793] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:06 msl2025.com gunicorn[18793]: [2025-05-12 10:10:06 +0100] [18793] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:07 msl2025.com gunicorn[18793]: [2025-05-12 10:10:07 +0100] [18793] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:07 msl2025.com gunicorn[18793]: [2025-05-12 10:10:07 +0100] [18793] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:08 msl2025.com gunicorn[18793]: [2025-05-12 10:10:08 +0100] [18793] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:08 msl2025.com gunicorn[18793]: [2025-05-12 10:10:08 +0100] [18793] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:09 msl2025.com gunicorn[18793]: [2025-05-12 10:10:09 +0100] [18793] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:09 msl2025.com gunicorn[18793]: [2025-05-12 10:10:09 +0100] [18793] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:10 msl2025.com gunicorn[18793]: [2025-05-12 10:10:10 +0100] [18793] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:10 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:10 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:10 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 7.
+May 12 10:10:10 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:10 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:10 msl2025.com gunicorn[18806]: [2025-05-12 10:10:10 +0100] [18806] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:10 msl2025.com gunicorn[18806]: [2025-05-12 10:10:10 +0100] [18806] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:10 msl2025.com gunicorn[18806]: [2025-05-12 10:10:10 +0100] [18806] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:11 msl2025.com gunicorn[18806]: [2025-05-12 10:10:11 +0100] [18806] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:11 msl2025.com gunicorn[18806]: [2025-05-12 10:10:11 +0100] [18806] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:12 msl2025.com gunicorn[18806]: [2025-05-12 10:10:12 +0100] [18806] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:12 msl2025.com gunicorn[18806]: [2025-05-12 10:10:12 +0100] [18806] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:13 msl2025.com gunicorn[18806]: [2025-05-12 10:10:13 +0100] [18806] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:13 msl2025.com gunicorn[18806]: [2025-05-12 10:10:13 +0100] [18806] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:14 msl2025.com gunicorn[18806]: [2025-05-12 10:10:14 +0100] [18806] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:14 msl2025.com gunicorn[18806]: [2025-05-12 10:10:14 +0100] [18806] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:15 msl2025.com gunicorn[18806]: [2025-05-12 10:10:15 +0100] [18806] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:15 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:15 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:16 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 8.
+May 12 10:10:16 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:16 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:16 msl2025.com gunicorn[18818]: [2025-05-12 10:10:16 +0100] [18818] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:16 msl2025.com gunicorn[18818]: [2025-05-12 10:10:16 +0100] [18818] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:16 msl2025.com gunicorn[18818]: [2025-05-12 10:10:16 +0100] [18818] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:17 msl2025.com gunicorn[18818]: [2025-05-12 10:10:17 +0100] [18818] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:17 msl2025.com gunicorn[18818]: [2025-05-12 10:10:17 +0100] [18818] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:18 msl2025.com gunicorn[18818]: [2025-05-12 10:10:18 +0100] [18818] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:18 msl2025.com gunicorn[18818]: [2025-05-12 10:10:18 +0100] [18818] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:19 msl2025.com gunicorn[18818]: [2025-05-12 10:10:19 +0100] [18818] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:19 msl2025.com gunicorn[18818]: [2025-05-12 10:10:19 +0100] [18818] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:20 msl2025.com gunicorn[18818]: [2025-05-12 10:10:20 +0100] [18818] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:20 msl2025.com gunicorn[18818]: [2025-05-12 10:10:20 +0100] [18818] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:21 msl2025.com gunicorn[18818]: [2025-05-12 10:10:21 +0100] [18818] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:21 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:21 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:21 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 9.
+May 12 10:10:21 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:21 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:21 msl2025.com gunicorn[18830]: [2025-05-12 10:10:21 +0100] [18830] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:21 msl2025.com gunicorn[18830]: [2025-05-12 10:10:21 +0100] [18830] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:21 msl2025.com gunicorn[18830]: [2025-05-12 10:10:21 +0100] [18830] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:22 msl2025.com gunicorn[18830]: [2025-05-12 10:10:22 +0100] [18830] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:22 msl2025.com gunicorn[18830]: [2025-05-12 10:10:22 +0100] [18830] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:23 msl2025.com gunicorn[18830]: [2025-05-12 10:10:23 +0100] [18830] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:23 msl2025.com gunicorn[18830]: [2025-05-12 10:10:23 +0100] [18830] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:24 msl2025.com gunicorn[18830]: [2025-05-12 10:10:24 +0100] [18830] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:24 msl2025.com gunicorn[18830]: [2025-05-12 10:10:24 +0100] [18830] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:25 msl2025.com gunicorn[18830]: [2025-05-12 10:10:25 +0100] [18830] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:25 msl2025.com gunicorn[18830]: [2025-05-12 10:10:25 +0100] [18830] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:26 msl2025.com gunicorn[18830]: [2025-05-12 10:10:26 +0100] [18830] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:26 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:26 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:26 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 10.
+May 12 10:10:26 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:26 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:26 msl2025.com gunicorn[18842]: [2025-05-12 10:10:26 +0100] [18842] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:26 msl2025.com gunicorn[18842]: [2025-05-12 10:10:26 +0100] [18842] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:26 msl2025.com gunicorn[18842]: [2025-05-12 10:10:26 +0100] [18842] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:27 msl2025.com gunicorn[18842]: [2025-05-12 10:10:27 +0100] [18842] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:27 msl2025.com gunicorn[18842]: [2025-05-12 10:10:27 +0100] [18842] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:28 msl2025.com gunicorn[18842]: [2025-05-12 10:10:28 +0100] [18842] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:28 msl2025.com gunicorn[18842]: [2025-05-12 10:10:28 +0100] [18842] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:29 msl2025.com gunicorn[18842]: [2025-05-12 10:10:29 +0100] [18842] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:29 msl2025.com gunicorn[18842]: [2025-05-12 10:10:29 +0100] [18842] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:30 msl2025.com gunicorn[18842]: [2025-05-12 10:10:30 +0100] [18842] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:30 msl2025.com gunicorn[18842]: [2025-05-12 10:10:30 +0100] [18842] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:31 msl2025.com gunicorn[18842]: [2025-05-12 10:10:31 +0100] [18842] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:31 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:31 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:31 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 11.
+May 12 10:10:31 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:31 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:31 msl2025.com gunicorn[18854]: [2025-05-12 10:10:31 +0100] [18854] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:31 msl2025.com gunicorn[18854]: [2025-05-12 10:10:31 +0100] [18854] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:31 msl2025.com gunicorn[18854]: [2025-05-12 10:10:31 +0100] [18854] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:32 msl2025.com gunicorn[18854]: [2025-05-12 10:10:32 +0100] [18854] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:32 msl2025.com gunicorn[18854]: [2025-05-12 10:10:32 +0100] [18854] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:33 msl2025.com gunicorn[18854]: [2025-05-12 10:10:33 +0100] [18854] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:33 msl2025.com gunicorn[18854]: [2025-05-12 10:10:33 +0100] [18854] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:34 msl2025.com gunicorn[18854]: [2025-05-12 10:10:34 +0100] [18854] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:34 msl2025.com gunicorn[18854]: [2025-05-12 10:10:34 +0100] [18854] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:35 msl2025.com gunicorn[18854]: [2025-05-12 10:10:35 +0100] [18854] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:35 msl2025.com gunicorn[18854]: [2025-05-12 10:10:35 +0100] [18854] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:36 msl2025.com gunicorn[18854]: [2025-05-12 10:10:36 +0100] [18854] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:36 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:36 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:37 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 12.
+May 12 10:10:37 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:37 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:37 msl2025.com gunicorn[18866]: [2025-05-12 10:10:37 +0100] [18866] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:37 msl2025.com gunicorn[18866]: [2025-05-12 10:10:37 +0100] [18866] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:37 msl2025.com gunicorn[18866]: [2025-05-12 10:10:37 +0100] [18866] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:38 msl2025.com gunicorn[18866]: [2025-05-12 10:10:38 +0100] [18866] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:38 msl2025.com gunicorn[18866]: [2025-05-12 10:10:38 +0100] [18866] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:39 msl2025.com gunicorn[18866]: [2025-05-12 10:10:39 +0100] [18866] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:39 msl2025.com gunicorn[18866]: [2025-05-12 10:10:39 +0100] [18866] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:40 msl2025.com gunicorn[18866]: [2025-05-12 10:10:40 +0100] [18866] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:40 msl2025.com gunicorn[18866]: [2025-05-12 10:10:40 +0100] [18866] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:41 msl2025.com gunicorn[18866]: [2025-05-12 10:10:41 +0100] [18866] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:41 msl2025.com gunicorn[18866]: [2025-05-12 10:10:41 +0100] [18866] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:42 msl2025.com gunicorn[18866]: [2025-05-12 10:10:42 +0100] [18866] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:42 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:42 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:42 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 13.
+May 12 10:10:42 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:42 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:42 msl2025.com gunicorn[18878]: [2025-05-12 10:10:42 +0100] [18878] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:42 msl2025.com gunicorn[18878]: [2025-05-12 10:10:42 +0100] [18878] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:42 msl2025.com gunicorn[18878]: [2025-05-12 10:10:42 +0100] [18878] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:43 msl2025.com gunicorn[18878]: [2025-05-12 10:10:43 +0100] [18878] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:43 msl2025.com gunicorn[18878]: [2025-05-12 10:10:43 +0100] [18878] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:44 msl2025.com gunicorn[18878]: [2025-05-12 10:10:44 +0100] [18878] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:44 msl2025.com gunicorn[18878]: [2025-05-12 10:10:44 +0100] [18878] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:45 msl2025.com gunicorn[18878]: [2025-05-12 10:10:45 +0100] [18878] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:45 msl2025.com gunicorn[18878]: [2025-05-12 10:10:45 +0100] [18878] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:46 msl2025.com gunicorn[18878]: [2025-05-12 10:10:46 +0100] [18878] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:46 msl2025.com gunicorn[18878]: [2025-05-12 10:10:46 +0100] [18878] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:47 msl2025.com gunicorn[18878]: [2025-05-12 10:10:47 +0100] [18878] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:47 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:47 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:47 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 14.
+May 12 10:10:47 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:47 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:47 msl2025.com gunicorn[18890]: [2025-05-12 10:10:47 +0100] [18890] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:47 msl2025.com gunicorn[18890]: [2025-05-12 10:10:47 +0100] [18890] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:47 msl2025.com gunicorn[18890]: [2025-05-12 10:10:47 +0100] [18890] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:48 msl2025.com gunicorn[18890]: [2025-05-12 10:10:48 +0100] [18890] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:48 msl2025.com gunicorn[18890]: [2025-05-12 10:10:48 +0100] [18890] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:49 msl2025.com gunicorn[18890]: [2025-05-12 10:10:49 +0100] [18890] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:49 msl2025.com gunicorn[18890]: [2025-05-12 10:10:49 +0100] [18890] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:50 msl2025.com gunicorn[18890]: [2025-05-12 10:10:50 +0100] [18890] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:50 msl2025.com gunicorn[18890]: [2025-05-12 10:10:50 +0100] [18890] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:51 msl2025.com gunicorn[18890]: [2025-05-12 10:10:51 +0100] [18890] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:51 msl2025.com gunicorn[18890]: [2025-05-12 10:10:51 +0100] [18890] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:52 msl2025.com gunicorn[18890]: [2025-05-12 10:10:52 +0100] [18890] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:52 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:52 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:52 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 15.
+May 12 10:10:52 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:52 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:52 msl2025.com gunicorn[18902]: [2025-05-12 10:10:52 +0100] [18902] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:52 msl2025.com gunicorn[18902]: [2025-05-12 10:10:52 +0100] [18902] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:52 msl2025.com gunicorn[18902]: [2025-05-12 10:10:52 +0100] [18902] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:53 msl2025.com gunicorn[18902]: [2025-05-12 10:10:53 +0100] [18902] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:53 msl2025.com gunicorn[18902]: [2025-05-12 10:10:53 +0100] [18902] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:54 msl2025.com gunicorn[18902]: [2025-05-12 10:10:54 +0100] [18902] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:54 msl2025.com gunicorn[18902]: [2025-05-12 10:10:54 +0100] [18902] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:55 msl2025.com gunicorn[18902]: [2025-05-12 10:10:55 +0100] [18902] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:55 msl2025.com gunicorn[18902]: [2025-05-12 10:10:55 +0100] [18902] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:56 msl2025.com gunicorn[18902]: [2025-05-12 10:10:56 +0100] [18902] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:56 msl2025.com gunicorn[18902]: [2025-05-12 10:10:56 +0100] [18902] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:57 msl2025.com gunicorn[18902]: [2025-05-12 10:10:57 +0100] [18902] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:10:57 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:10:57 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:10:58 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 16.
+May 12 10:10:58 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:10:58 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:10:58 msl2025.com gunicorn[18917]: [2025-05-12 10:10:58 +0100] [18917] [INFO] Starting gunicorn 23.0.0
+May 12 10:10:58 msl2025.com gunicorn[18917]: [2025-05-12 10:10:58 +0100] [18917] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:58 msl2025.com gunicorn[18917]: [2025-05-12 10:10:58 +0100] [18917] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:10:59 msl2025.com gunicorn[18917]: [2025-05-12 10:10:59 +0100] [18917] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:10:59 msl2025.com gunicorn[18917]: [2025-05-12 10:10:59 +0100] [18917] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:00 msl2025.com gunicorn[18917]: [2025-05-12 10:11:00 +0100] [18917] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:00 msl2025.com gunicorn[18917]: [2025-05-12 10:11:00 +0100] [18917] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:01 msl2025.com gunicorn[18917]: [2025-05-12 10:11:01 +0100] [18917] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:01 msl2025.com gunicorn[18917]: [2025-05-12 10:11:01 +0100] [18917] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:02 msl2025.com gunicorn[18917]: [2025-05-12 10:11:02 +0100] [18917] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:02 msl2025.com gunicorn[18917]: [2025-05-12 10:11:02 +0100] [18917] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:03 msl2025.com gunicorn[18917]: [2025-05-12 10:11:03 +0100] [18917] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:03 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:03 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:03 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 17.
+May 12 10:11:03 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:03 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:03 msl2025.com gunicorn[18929]: [2025-05-12 10:11:03 +0100] [18929] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:03 msl2025.com gunicorn[18929]: [2025-05-12 10:11:03 +0100] [18929] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:03 msl2025.com gunicorn[18929]: [2025-05-12 10:11:03 +0100] [18929] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:04 msl2025.com gunicorn[18929]: [2025-05-12 10:11:04 +0100] [18929] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:04 msl2025.com gunicorn[18929]: [2025-05-12 10:11:04 +0100] [18929] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:05 msl2025.com gunicorn[18929]: [2025-05-12 10:11:05 +0100] [18929] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:05 msl2025.com gunicorn[18929]: [2025-05-12 10:11:05 +0100] [18929] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:06 msl2025.com gunicorn[18929]: [2025-05-12 10:11:06 +0100] [18929] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:06 msl2025.com gunicorn[18929]: [2025-05-12 10:11:06 +0100] [18929] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:07 msl2025.com gunicorn[18929]: [2025-05-12 10:11:07 +0100] [18929] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:07 msl2025.com gunicorn[18929]: [2025-05-12 10:11:07 +0100] [18929] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:08 msl2025.com gunicorn[18929]: [2025-05-12 10:11:08 +0100] [18929] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:08 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:08 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:08 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 18.
+May 12 10:11:08 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:08 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:08 msl2025.com gunicorn[18941]: [2025-05-12 10:11:08 +0100] [18941] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:08 msl2025.com gunicorn[18941]: [2025-05-12 10:11:08 +0100] [18941] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:08 msl2025.com gunicorn[18941]: [2025-05-12 10:11:08 +0100] [18941] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:09 msl2025.com gunicorn[18941]: [2025-05-12 10:11:09 +0100] [18941] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:09 msl2025.com gunicorn[18941]: [2025-05-12 10:11:09 +0100] [18941] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:10 msl2025.com gunicorn[18941]: [2025-05-12 10:11:10 +0100] [18941] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:10 msl2025.com gunicorn[18941]: [2025-05-12 10:11:10 +0100] [18941] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:11 msl2025.com gunicorn[18941]: [2025-05-12 10:11:11 +0100] [18941] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:11 msl2025.com gunicorn[18941]: [2025-05-12 10:11:11 +0100] [18941] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:12 msl2025.com gunicorn[18941]: [2025-05-12 10:11:12 +0100] [18941] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:12 msl2025.com gunicorn[18941]: [2025-05-12 10:11:12 +0100] [18941] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:13 msl2025.com gunicorn[18941]: [2025-05-12 10:11:13 +0100] [18941] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:13 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:13 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:13 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 19.
+May 12 10:11:13 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:13 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:13 msl2025.com gunicorn[18953]: [2025-05-12 10:11:13 +0100] [18953] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:13 msl2025.com gunicorn[18953]: [2025-05-12 10:11:13 +0100] [18953] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:13 msl2025.com gunicorn[18953]: [2025-05-12 10:11:13 +0100] [18953] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:14 msl2025.com gunicorn[18953]: [2025-05-12 10:11:14 +0100] [18953] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:14 msl2025.com gunicorn[18953]: [2025-05-12 10:11:14 +0100] [18953] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:15 msl2025.com gunicorn[18953]: [2025-05-12 10:11:15 +0100] [18953] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:15 msl2025.com gunicorn[18953]: [2025-05-12 10:11:15 +0100] [18953] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:16 msl2025.com gunicorn[18953]: [2025-05-12 10:11:16 +0100] [18953] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:16 msl2025.com gunicorn[18953]: [2025-05-12 10:11:16 +0100] [18953] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:17 msl2025.com gunicorn[18953]: [2025-05-12 10:11:17 +0100] [18953] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:17 msl2025.com gunicorn[18953]: [2025-05-12 10:11:17 +0100] [18953] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:18 msl2025.com gunicorn[18953]: [2025-05-12 10:11:18 +0100] [18953] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:18 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:18 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:19 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 20.
+May 12 10:11:19 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:19 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:19 msl2025.com gunicorn[18965]: [2025-05-12 10:11:19 +0100] [18965] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:19 msl2025.com gunicorn[18965]: [2025-05-12 10:11:19 +0100] [18965] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:19 msl2025.com gunicorn[18965]: [2025-05-12 10:11:19 +0100] [18965] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:20 msl2025.com gunicorn[18965]: [2025-05-12 10:11:20 +0100] [18965] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:20 msl2025.com gunicorn[18965]: [2025-05-12 10:11:20 +0100] [18965] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:21 msl2025.com gunicorn[18965]: [2025-05-12 10:11:21 +0100] [18965] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:21 msl2025.com gunicorn[18965]: [2025-05-12 10:11:21 +0100] [18965] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:22 msl2025.com gunicorn[18965]: [2025-05-12 10:11:22 +0100] [18965] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:22 msl2025.com gunicorn[18965]: [2025-05-12 10:11:22 +0100] [18965] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:23 msl2025.com gunicorn[18965]: [2025-05-12 10:11:23 +0100] [18965] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:23 msl2025.com gunicorn[18965]: [2025-05-12 10:11:23 +0100] [18965] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:24 msl2025.com gunicorn[18965]: [2025-05-12 10:11:24 +0100] [18965] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:24 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:24 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:24 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 21.
+May 12 10:11:24 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:24 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:24 msl2025.com gunicorn[18977]: [2025-05-12 10:11:24 +0100] [18977] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:24 msl2025.com gunicorn[18977]: [2025-05-12 10:11:24 +0100] [18977] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:24 msl2025.com gunicorn[18977]: [2025-05-12 10:11:24 +0100] [18977] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:25 msl2025.com gunicorn[18977]: [2025-05-12 10:11:25 +0100] [18977] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:25 msl2025.com gunicorn[18977]: [2025-05-12 10:11:25 +0100] [18977] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:26 msl2025.com gunicorn[18977]: [2025-05-12 10:11:26 +0100] [18977] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:26 msl2025.com gunicorn[18977]: [2025-05-12 10:11:26 +0100] [18977] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:27 msl2025.com gunicorn[18977]: [2025-05-12 10:11:27 +0100] [18977] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:27 msl2025.com gunicorn[18977]: [2025-05-12 10:11:27 +0100] [18977] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:28 msl2025.com gunicorn[18977]: [2025-05-12 10:11:28 +0100] [18977] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:28 msl2025.com gunicorn[18977]: [2025-05-12 10:11:28 +0100] [18977] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:29 msl2025.com gunicorn[18977]: [2025-05-12 10:11:29 +0100] [18977] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:29 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:29 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:29 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 22.
+May 12 10:11:29 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:29 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:29 msl2025.com gunicorn[18989]: [2025-05-12 10:11:29 +0100] [18989] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:29 msl2025.com gunicorn[18989]: [2025-05-12 10:11:29 +0100] [18989] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:29 msl2025.com gunicorn[18989]: [2025-05-12 10:11:29 +0100] [18989] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:30 msl2025.com gunicorn[18989]: [2025-05-12 10:11:30 +0100] [18989] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:30 msl2025.com gunicorn[18989]: [2025-05-12 10:11:30 +0100] [18989] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:31 msl2025.com gunicorn[18989]: [2025-05-12 10:11:31 +0100] [18989] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:31 msl2025.com gunicorn[18989]: [2025-05-12 10:11:31 +0100] [18989] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:32 msl2025.com gunicorn[18989]: [2025-05-12 10:11:32 +0100] [18989] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:32 msl2025.com gunicorn[18989]: [2025-05-12 10:11:32 +0100] [18989] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:33 msl2025.com gunicorn[18989]: [2025-05-12 10:11:33 +0100] [18989] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:33 msl2025.com gunicorn[18989]: [2025-05-12 10:11:33 +0100] [18989] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:34 msl2025.com gunicorn[18989]: [2025-05-12 10:11:34 +0100] [18989] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:34 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:34 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:34 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 23.
+May 12 10:11:34 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:34 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:34 msl2025.com gunicorn[19002]: [2025-05-12 10:11:34 +0100] [19002] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:34 msl2025.com gunicorn[19002]: [2025-05-12 10:11:34 +0100] [19002] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:34 msl2025.com gunicorn[19002]: [2025-05-12 10:11:34 +0100] [19002] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:35 msl2025.com gunicorn[19002]: [2025-05-12 10:11:35 +0100] [19002] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:35 msl2025.com gunicorn[19002]: [2025-05-12 10:11:35 +0100] [19002] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:36 msl2025.com gunicorn[19002]: [2025-05-12 10:11:36 +0100] [19002] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:36 msl2025.com gunicorn[19002]: [2025-05-12 10:11:36 +0100] [19002] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:37 msl2025.com gunicorn[19002]: [2025-05-12 10:11:37 +0100] [19002] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:37 msl2025.com gunicorn[19002]: [2025-05-12 10:11:37 +0100] [19002] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:38 msl2025.com gunicorn[19002]: [2025-05-12 10:11:38 +0100] [19002] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:38 msl2025.com gunicorn[19002]: [2025-05-12 10:11:38 +0100] [19002] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:39 msl2025.com gunicorn[19002]: [2025-05-12 10:11:39 +0100] [19002] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:39 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:39 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:40 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 24.
+May 12 10:11:40 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:40 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:40 msl2025.com gunicorn[19014]: [2025-05-12 10:11:40 +0100] [19014] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:40 msl2025.com gunicorn[19014]: [2025-05-12 10:11:40 +0100] [19014] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:40 msl2025.com gunicorn[19014]: [2025-05-12 10:11:40 +0100] [19014] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:41 msl2025.com gunicorn[19014]: [2025-05-12 10:11:41 +0100] [19014] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:41 msl2025.com gunicorn[19014]: [2025-05-12 10:11:41 +0100] [19014] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:42 msl2025.com gunicorn[19014]: [2025-05-12 10:11:42 +0100] [19014] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:42 msl2025.com gunicorn[19014]: [2025-05-12 10:11:42 +0100] [19014] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:43 msl2025.com gunicorn[19014]: [2025-05-12 10:11:43 +0100] [19014] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:43 msl2025.com gunicorn[19014]: [2025-05-12 10:11:43 +0100] [19014] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:44 msl2025.com gunicorn[19014]: [2025-05-12 10:11:44 +0100] [19014] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:44 msl2025.com gunicorn[19014]: [2025-05-12 10:11:44 +0100] [19014] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:45 msl2025.com gunicorn[19014]: [2025-05-12 10:11:45 +0100] [19014] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:45 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:45 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:45 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 25.
+May 12 10:11:45 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:45 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:45 msl2025.com gunicorn[19026]: [2025-05-12 10:11:45 +0100] [19026] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:45 msl2025.com gunicorn[19026]: [2025-05-12 10:11:45 +0100] [19026] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:45 msl2025.com gunicorn[19026]: [2025-05-12 10:11:45 +0100] [19026] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:46 msl2025.com gunicorn[19026]: [2025-05-12 10:11:46 +0100] [19026] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:46 msl2025.com gunicorn[19026]: [2025-05-12 10:11:46 +0100] [19026] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:47 msl2025.com gunicorn[19026]: [2025-05-12 10:11:47 +0100] [19026] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:47 msl2025.com gunicorn[19026]: [2025-05-12 10:11:47 +0100] [19026] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:48 msl2025.com gunicorn[19026]: [2025-05-12 10:11:48 +0100] [19026] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:48 msl2025.com gunicorn[19026]: [2025-05-12 10:11:48 +0100] [19026] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:49 msl2025.com gunicorn[19026]: [2025-05-12 10:11:49 +0100] [19026] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:49 msl2025.com gunicorn[19026]: [2025-05-12 10:11:49 +0100] [19026] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:50 msl2025.com gunicorn[19026]: [2025-05-12 10:11:50 +0100] [19026] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:50 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:50 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:50 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 26.
+May 12 10:11:50 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:50 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:50 msl2025.com gunicorn[19038]: [2025-05-12 10:11:50 +0100] [19038] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:50 msl2025.com gunicorn[19038]: [2025-05-12 10:11:50 +0100] [19038] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:50 msl2025.com gunicorn[19038]: [2025-05-12 10:11:50 +0100] [19038] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:51 msl2025.com gunicorn[19038]: [2025-05-12 10:11:51 +0100] [19038] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:51 msl2025.com gunicorn[19038]: [2025-05-12 10:11:51 +0100] [19038] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:52 msl2025.com gunicorn[19038]: [2025-05-12 10:11:52 +0100] [19038] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:52 msl2025.com gunicorn[19038]: [2025-05-12 10:11:52 +0100] [19038] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:53 msl2025.com gunicorn[19038]: [2025-05-12 10:11:53 +0100] [19038] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:53 msl2025.com gunicorn[19038]: [2025-05-12 10:11:53 +0100] [19038] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:54 msl2025.com gunicorn[19038]: [2025-05-12 10:11:54 +0100] [19038] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:54 msl2025.com gunicorn[19038]: [2025-05-12 10:11:54 +0100] [19038] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:55 msl2025.com gunicorn[19038]: [2025-05-12 10:11:55 +0100] [19038] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:11:55 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:11:55 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:11:55 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 27.
+May 12 10:11:55 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:11:55 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:11:55 msl2025.com gunicorn[19050]: [2025-05-12 10:11:55 +0100] [19050] [INFO] Starting gunicorn 23.0.0
+May 12 10:11:55 msl2025.com gunicorn[19050]: [2025-05-12 10:11:55 +0100] [19050] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:55 msl2025.com gunicorn[19050]: [2025-05-12 10:11:55 +0100] [19050] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:56 msl2025.com gunicorn[19050]: [2025-05-12 10:11:56 +0100] [19050] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:56 msl2025.com gunicorn[19050]: [2025-05-12 10:11:56 +0100] [19050] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:57 msl2025.com gunicorn[19050]: [2025-05-12 10:11:57 +0100] [19050] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:57 msl2025.com gunicorn[19050]: [2025-05-12 10:11:57 +0100] [19050] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:58 msl2025.com gunicorn[19050]: [2025-05-12 10:11:58 +0100] [19050] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:58 msl2025.com gunicorn[19050]: [2025-05-12 10:11:58 +0100] [19050] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:11:59 msl2025.com gunicorn[19050]: [2025-05-12 10:11:59 +0100] [19050] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:11:59 msl2025.com gunicorn[19050]: [2025-05-12 10:11:59 +0100] [19050] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:00 msl2025.com gunicorn[19050]: [2025-05-12 10:12:00 +0100] [19050] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:00 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:00 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:01 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 28.
+May 12 10:12:01 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:01 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:01 msl2025.com gunicorn[19062]: [2025-05-12 10:12:01 +0100] [19062] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:01 msl2025.com gunicorn[19062]: [2025-05-12 10:12:01 +0100] [19062] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:01 msl2025.com gunicorn[19062]: [2025-05-12 10:12:01 +0100] [19062] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:02 msl2025.com gunicorn[19062]: [2025-05-12 10:12:02 +0100] [19062] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:02 msl2025.com gunicorn[19062]: [2025-05-12 10:12:02 +0100] [19062] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:03 msl2025.com gunicorn[19062]: [2025-05-12 10:12:03 +0100] [19062] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:03 msl2025.com gunicorn[19062]: [2025-05-12 10:12:03 +0100] [19062] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:04 msl2025.com gunicorn[19062]: [2025-05-12 10:12:04 +0100] [19062] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:04 msl2025.com gunicorn[19062]: [2025-05-12 10:12:04 +0100] [19062] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:05 msl2025.com gunicorn[19062]: [2025-05-12 10:12:05 +0100] [19062] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19062]: [2025-05-12 10:12:05 +0100] [19062] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19062]: [2025-05-12 10:12:06 +0100] [19062] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:06 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:06 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:06 +0100] [19074] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:06 +0100] [19074] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:06 +0100] [19074] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:07 +0100] [19074] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:07 +0100] [19074] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:08 +0100] [19074] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:08 +0100] [19074] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:09 +0100] [19074] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:09 +0100] [19074] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:10 +0100] [19074] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:10 +0100] [19074] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19074]: [2025-05-12 10:12:11 +0100] [19074] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:06 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 29.
+May 12 10:12:12 msl2025.com gunicorn[19086]: [2025-05-12 10:12:11 +0100] [19086] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:12 msl2025.com gunicorn[19086]: [2025-05-12 10:12:11 +0100] [19086] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19086]: [2025-05-12 10:12:11 +0100] [19086] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:12 msl2025.com gunicorn[19086]: [2025-05-12 10:12:12 +0100] [19086] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:12 msl2025.com gunicorn[19086]: [2025-05-12 10:12:12 +0100] [19086] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:06 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:06 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:11 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:11 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:11 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 30.
+May 12 10:12:11 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:11 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:13 msl2025.com gunicorn[19086]: [2025-05-12 10:12:13 +0100] [19086] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:13 msl2025.com gunicorn[19086]: [2025-05-12 10:12:13 +0100] [19086] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:14 msl2025.com gunicorn[19086]: [2025-05-12 10:12:14 +0100] [19086] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:14 msl2025.com gunicorn[19086]: [2025-05-12 10:12:14 +0100] [19086] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:15 msl2025.com gunicorn[19086]: [2025-05-12 10:12:15 +0100] [19086] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:15 msl2025.com gunicorn[19086]: [2025-05-12 10:12:15 +0100] [19086] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:16 msl2025.com gunicorn[19086]: [2025-05-12 10:12:16 +0100] [19086] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:16 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:16 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:16 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 31.
+May 12 10:12:16 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:16 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:16 msl2025.com gunicorn[19402]: [2025-05-12 10:12:16 +0100] [19402] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:16 msl2025.com gunicorn[19402]: [2025-05-12 10:12:16 +0100] [19402] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:16 msl2025.com gunicorn[19402]: [2025-05-12 10:12:16 +0100] [19402] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:17 msl2025.com gunicorn[19402]: [2025-05-12 10:12:17 +0100] [19402] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:17 msl2025.com gunicorn[19402]: [2025-05-12 10:12:17 +0100] [19402] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:18 msl2025.com gunicorn[19402]: [2025-05-12 10:12:18 +0100] [19402] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:18 msl2025.com gunicorn[19402]: [2025-05-12 10:12:18 +0100] [19402] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:19 msl2025.com gunicorn[19402]: [2025-05-12 10:12:19 +0100] [19402] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:19 msl2025.com gunicorn[19402]: [2025-05-12 10:12:19 +0100] [19402] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:20 msl2025.com gunicorn[19402]: [2025-05-12 10:12:20 +0100] [19402] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:20 msl2025.com gunicorn[19402]: [2025-05-12 10:12:20 +0100] [19402] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:21 msl2025.com gunicorn[19402]: [2025-05-12 10:12:21 +0100] [19402] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:21 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:21 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:22 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 32.
+May 12 10:12:22 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:22 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:22 msl2025.com gunicorn[19438]: [2025-05-12 10:12:22 +0100] [19438] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:22 msl2025.com gunicorn[19438]: [2025-05-12 10:12:22 +0100] [19438] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:22 msl2025.com gunicorn[19438]: [2025-05-12 10:12:22 +0100] [19438] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:23 msl2025.com gunicorn[19438]: [2025-05-12 10:12:23 +0100] [19438] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:23 msl2025.com gunicorn[19438]: [2025-05-12 10:12:23 +0100] [19438] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:24 msl2025.com gunicorn[19438]: [2025-05-12 10:12:24 +0100] [19438] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:24 msl2025.com gunicorn[19438]: [2025-05-12 10:12:24 +0100] [19438] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:25 msl2025.com gunicorn[19438]: [2025-05-12 10:12:25 +0100] [19438] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:25 msl2025.com gunicorn[19438]: [2025-05-12 10:12:25 +0100] [19438] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:26 msl2025.com gunicorn[19438]: [2025-05-12 10:12:26 +0100] [19438] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:26 msl2025.com gunicorn[19438]: [2025-05-12 10:12:26 +0100] [19438] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:27 msl2025.com gunicorn[19438]: [2025-05-12 10:12:27 +0100] [19438] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:27 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:27 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:27 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 33.
+May 12 10:12:27 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:27 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:27 msl2025.com gunicorn[19441]: [2025-05-12 10:12:27 +0100] [19441] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:27 msl2025.com gunicorn[19441]: [2025-05-12 10:12:27 +0100] [19441] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:27 msl2025.com gunicorn[19441]: [2025-05-12 10:12:27 +0100] [19441] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:28 msl2025.com gunicorn[19441]: [2025-05-12 10:12:28 +0100] [19441] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:28 msl2025.com gunicorn[19441]: [2025-05-12 10:12:28 +0100] [19441] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:29 msl2025.com gunicorn[19441]: [2025-05-12 10:12:29 +0100] [19441] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:29 msl2025.com gunicorn[19441]: [2025-05-12 10:12:29 +0100] [19441] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:30 msl2025.com gunicorn[19441]: [2025-05-12 10:12:30 +0100] [19441] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:30 msl2025.com gunicorn[19441]: [2025-05-12 10:12:30 +0100] [19441] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:31 msl2025.com gunicorn[19441]: [2025-05-12 10:12:31 +0100] [19441] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:31 msl2025.com gunicorn[19441]: [2025-05-12 10:12:31 +0100] [19441] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:32 msl2025.com gunicorn[19441]: [2025-05-12 10:12:32 +0100] [19441] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:32 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:32 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:32 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 34.
+May 12 10:12:32 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:32 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:32 msl2025.com gunicorn[19453]: [2025-05-12 10:12:32 +0100] [19453] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:32 msl2025.com gunicorn[19453]: [2025-05-12 10:12:32 +0100] [19453] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:32 msl2025.com gunicorn[19453]: [2025-05-12 10:12:32 +0100] [19453] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:33 msl2025.com gunicorn[19453]: [2025-05-12 10:12:33 +0100] [19453] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:33 msl2025.com gunicorn[19453]: [2025-05-12 10:12:33 +0100] [19453] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:34 msl2025.com gunicorn[19453]: [2025-05-12 10:12:34 +0100] [19453] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:34 msl2025.com gunicorn[19453]: [2025-05-12 10:12:34 +0100] [19453] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:35 msl2025.com gunicorn[19453]: [2025-05-12 10:12:35 +0100] [19453] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:35 msl2025.com gunicorn[19453]: [2025-05-12 10:12:35 +0100] [19453] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:36 msl2025.com gunicorn[19453]: [2025-05-12 10:12:36 +0100] [19453] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:36 msl2025.com gunicorn[19453]: [2025-05-12 10:12:36 +0100] [19453] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:37 msl2025.com gunicorn[19453]: [2025-05-12 10:12:37 +0100] [19453] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:37 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:37 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:37 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 35.
+May 12 10:12:37 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:37 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:37 msl2025.com gunicorn[19465]: [2025-05-12 10:12:37 +0100] [19465] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:37 msl2025.com gunicorn[19465]: [2025-05-12 10:12:37 +0100] [19465] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:37 msl2025.com gunicorn[19465]: [2025-05-12 10:12:37 +0100] [19465] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:38 msl2025.com gunicorn[19465]: [2025-05-12 10:12:38 +0100] [19465] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:38 msl2025.com gunicorn[19465]: [2025-05-12 10:12:38 +0100] [19465] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:39 msl2025.com gunicorn[19465]: [2025-05-12 10:12:39 +0100] [19465] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:39 msl2025.com gunicorn[19465]: [2025-05-12 10:12:39 +0100] [19465] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:40 msl2025.com gunicorn[19465]: [2025-05-12 10:12:40 +0100] [19465] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:40 msl2025.com gunicorn[19465]: [2025-05-12 10:12:40 +0100] [19465] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:41 msl2025.com gunicorn[19465]: [2025-05-12 10:12:41 +0100] [19465] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:41 msl2025.com gunicorn[19465]: [2025-05-12 10:12:41 +0100] [19465] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:42 msl2025.com gunicorn[19465]: [2025-05-12 10:12:42 +0100] [19465] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:42 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:42 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:43 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 36.
+May 12 10:12:43 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:43 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:43 msl2025.com gunicorn[19477]: [2025-05-12 10:12:43 +0100] [19477] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:43 msl2025.com gunicorn[19477]: [2025-05-12 10:12:43 +0100] [19477] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:43 msl2025.com gunicorn[19477]: [2025-05-12 10:12:43 +0100] [19477] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:44 msl2025.com gunicorn[19477]: [2025-05-12 10:12:44 +0100] [19477] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:44 msl2025.com gunicorn[19477]: [2025-05-12 10:12:44 +0100] [19477] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:45 msl2025.com gunicorn[19477]: [2025-05-12 10:12:45 +0100] [19477] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:45 msl2025.com gunicorn[19477]: [2025-05-12 10:12:45 +0100] [19477] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:46 msl2025.com gunicorn[19477]: [2025-05-12 10:12:46 +0100] [19477] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:46 msl2025.com gunicorn[19477]: [2025-05-12 10:12:46 +0100] [19477] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:47 msl2025.com gunicorn[19477]: [2025-05-12 10:12:47 +0100] [19477] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:47 msl2025.com gunicorn[19477]: [2025-05-12 10:12:47 +0100] [19477] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:48 msl2025.com gunicorn[19477]: [2025-05-12 10:12:48 +0100] [19477] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:48 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:48 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:48 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 37.
+May 12 10:12:48 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:48 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:48 msl2025.com gunicorn[19489]: [2025-05-12 10:12:48 +0100] [19489] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:48 msl2025.com gunicorn[19489]: [2025-05-12 10:12:48 +0100] [19489] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:48 msl2025.com gunicorn[19489]: [2025-05-12 10:12:48 +0100] [19489] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:49 msl2025.com gunicorn[19489]: [2025-05-12 10:12:49 +0100] [19489] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:49 msl2025.com gunicorn[19489]: [2025-05-12 10:12:49 +0100] [19489] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:50 msl2025.com gunicorn[19489]: [2025-05-12 10:12:50 +0100] [19489] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:50 msl2025.com gunicorn[19489]: [2025-05-12 10:12:50 +0100] [19489] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:51 msl2025.com gunicorn[19489]: [2025-05-12 10:12:51 +0100] [19489] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:51 msl2025.com gunicorn[19489]: [2025-05-12 10:12:51 +0100] [19489] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:52 msl2025.com gunicorn[19489]: [2025-05-12 10:12:52 +0100] [19489] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:52 msl2025.com gunicorn[19489]: [2025-05-12 10:12:52 +0100] [19489] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:53 msl2025.com gunicorn[19489]: [2025-05-12 10:12:53 +0100] [19489] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:53 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:53 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:53 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 38.
+May 12 10:12:53 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:53 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:53 msl2025.com gunicorn[19495]: [2025-05-12 10:12:53 +0100] [19495] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:53 msl2025.com gunicorn[19495]: [2025-05-12 10:12:53 +0100] [19495] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:53 msl2025.com gunicorn[19495]: [2025-05-12 10:12:53 +0100] [19495] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:54 msl2025.com gunicorn[19495]: [2025-05-12 10:12:54 +0100] [19495] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:54 msl2025.com gunicorn[19495]: [2025-05-12 10:12:54 +0100] [19495] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:55 msl2025.com gunicorn[19495]: [2025-05-12 10:12:55 +0100] [19495] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:55 msl2025.com gunicorn[19495]: [2025-05-12 10:12:55 +0100] [19495] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:56 msl2025.com gunicorn[19495]: [2025-05-12 10:12:56 +0100] [19495] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:56 msl2025.com gunicorn[19495]: [2025-05-12 10:12:56 +0100] [19495] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:57 msl2025.com gunicorn[19495]: [2025-05-12 10:12:57 +0100] [19495] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:57 msl2025.com gunicorn[19495]: [2025-05-12 10:12:57 +0100] [19495] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:58 msl2025.com gunicorn[19495]: [2025-05-12 10:12:58 +0100] [19495] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:12:58 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:12:58 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:12:58 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 39.
+May 12 10:12:58 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:12:58 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:12:58 msl2025.com gunicorn[19509]: [2025-05-12 10:12:58 +0100] [19509] [INFO] Starting gunicorn 23.0.0
+May 12 10:12:58 msl2025.com gunicorn[19509]: [2025-05-12 10:12:58 +0100] [19509] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:58 msl2025.com gunicorn[19509]: [2025-05-12 10:12:58 +0100] [19509] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:12:59 msl2025.com gunicorn[19509]: [2025-05-12 10:12:59 +0100] [19509] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:12:59 msl2025.com gunicorn[19509]: [2025-05-12 10:12:59 +0100] [19509] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:00 msl2025.com gunicorn[19509]: [2025-05-12 10:13:00 +0100] [19509] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:13:00 msl2025.com gunicorn[19509]: [2025-05-12 10:13:00 +0100] [19509] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:01 msl2025.com gunicorn[19509]: [2025-05-12 10:13:01 +0100] [19509] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:13:01 msl2025.com gunicorn[19509]: [2025-05-12 10:13:01 +0100] [19509] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:02 msl2025.com gunicorn[19509]: [2025-05-12 10:13:02 +0100] [19509] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:13:02 msl2025.com gunicorn[19509]: [2025-05-12 10:13:02 +0100] [19509] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:03 msl2025.com gunicorn[19509]: [2025-05-12 10:13:03 +0100] [19509] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:13:03 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:13:03 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:13:04 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 40.
+May 12 10:13:04 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:13:04 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:13:04 msl2025.com gunicorn[19523]: [2025-05-12 10:13:04 +0100] [19523] [INFO] Starting gunicorn 23.0.0
+May 12 10:13:04 msl2025.com gunicorn[19523]: [2025-05-12 10:13:04 +0100] [19523] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:13:04 msl2025.com gunicorn[19523]: [2025-05-12 10:13:04 +0100] [19523] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:05 msl2025.com gunicorn[19523]: [2025-05-12 10:13:05 +0100] [19523] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:13:05 msl2025.com gunicorn[19523]: [2025-05-12 10:13:05 +0100] [19523] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:13:06 msl2025.com gunicorn[19523]: [2025-05-12 10:13:06 +0100] [19523] [INFO] Listening at: http://0.0.0.0:8000 (19523)
+May 12 10:13:06 msl2025.com gunicorn[19523]: [2025-05-12 10:13:06 +0100] [19523] [INFO] Using worker: sync
+May 12 10:13:06 msl2025.com gunicorn[19525]: [2025-05-12 10:13:06 +0100] [19525] [INFO] Booting worker with pid: 19525
+May 12 10:13:06 msl2025.com gunicorn[19526]: [2025-05-12 10:13:06 +0100] [19526] [INFO] Booting worker with pid: 19526
+May 12 10:13:06 msl2025.com gunicorn[19527]: [2025-05-12 10:13:06 +0100] [19527] [INFO] Booting worker with pid: 19527
+May 12 10:14:04 msl2025.com gunicorn[19523]: [2025-05-12 10:14:04 +0100] [19523] [INFO] Handling signal: term
+May 12 10:14:04 msl2025.com gunicorn[19525]: [2025-05-12 10:14:04 +0100] [19525] [INFO] Worker exiting (pid: 19525)
+May 12 10:14:04 msl2025.com systemd[1]: Stopping Gunicorn service for Restaurant Map...
+May 12 10:14:04 msl2025.com gunicorn[19526]: [2025-05-12 10:14:04 +0100] [19526] [INFO] Worker exiting (pid: 19526)
+May 12 10:14:04 msl2025.com gunicorn[19527]: [2025-05-12 10:14:04 +0100] [19527] [INFO] Worker exiting (pid: 19527)
+May 12 10:14:04 msl2025.com gunicorn[19523]: [2025-05-12 10:14:04 +0100] [19523] [ERROR] Worker (pid:19525) was sent SIGTERM!
+May 12 10:14:04 msl2025.com gunicorn[19523]: [2025-05-12 10:14:04 +0100] [19523] [ERROR] Worker (pid:19527) was sent SIGTERM!
+May 12 10:14:04 msl2025.com gunicorn[19523]: [2025-05-12 10:14:04 +0100] [19523] [ERROR] Worker (pid:19526) was sent SIGTERM!
+May 12 10:14:04 msl2025.com gunicorn[19523]: [2025-05-12 10:14:04 +0100] [19523] [INFO] Shutting down: Master
+May 12 10:14:04 msl2025.com systemd[1]: gunicorn.service: Succeeded.
+May 12 10:14:04 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:15:38 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:15:38 msl2025.com gunicorn[19606]: [2025-05-12 10:15:38 +0100] [19606] [INFO] Starting gunicorn 23.0.0
+May 12 10:15:38 msl2025.com gunicorn[19606]: [2025-05-12 10:15:38 +0100] [19606] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:38 msl2025.com gunicorn[19606]: [2025-05-12 10:15:38 +0100] [19606] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:39 msl2025.com gunicorn[19606]: [2025-05-12 10:15:39 +0100] [19606] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:39 msl2025.com gunicorn[19606]: [2025-05-12 10:15:39 +0100] [19606] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:40 msl2025.com gunicorn[19606]: [2025-05-12 10:15:40 +0100] [19606] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:40 msl2025.com gunicorn[19606]: [2025-05-12 10:15:40 +0100] [19606] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:41 msl2025.com gunicorn[19606]: [2025-05-12 10:15:41 +0100] [19606] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:41 msl2025.com gunicorn[19606]: [2025-05-12 10:15:41 +0100] [19606] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:42 msl2025.com gunicorn[19606]: [2025-05-12 10:15:42 +0100] [19606] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:42 msl2025.com gunicorn[19606]: [2025-05-12 10:15:42 +0100] [19606] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:43 msl2025.com gunicorn[19606]: [2025-05-12 10:15:43 +0100] [19606] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:15:43 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:15:43 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:15:43 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 1.
+May 12 10:15:43 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:15:43 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:15:43 msl2025.com gunicorn[19631]: [2025-05-12 10:15:43 +0100] [19631] [INFO] Starting gunicorn 23.0.0
+May 12 10:15:43 msl2025.com gunicorn[19631]: [2025-05-12 10:15:43 +0100] [19631] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:43 msl2025.com gunicorn[19631]: [2025-05-12 10:15:43 +0100] [19631] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:44 msl2025.com gunicorn[19631]: [2025-05-12 10:15:44 +0100] [19631] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:44 msl2025.com gunicorn[19631]: [2025-05-12 10:15:44 +0100] [19631] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:45 msl2025.com gunicorn[19631]: [2025-05-12 10:15:45 +0100] [19631] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:45 msl2025.com gunicorn[19631]: [2025-05-12 10:15:45 +0100] [19631] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:46 msl2025.com gunicorn[19631]: [2025-05-12 10:15:46 +0100] [19631] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:46 msl2025.com gunicorn[19631]: [2025-05-12 10:15:46 +0100] [19631] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:47 msl2025.com gunicorn[19631]: [2025-05-12 10:15:47 +0100] [19631] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:47 msl2025.com gunicorn[19631]: [2025-05-12 10:15:47 +0100] [19631] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:48 msl2025.com gunicorn[19631]: [2025-05-12 10:15:48 +0100] [19631] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:15:48 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:15:48 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:15:49 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 2.
+May 12 10:15:49 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:15:49 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:15:49 msl2025.com gunicorn[19645]: [2025-05-12 10:15:49 +0100] [19645] [INFO] Starting gunicorn 23.0.0
+May 12 10:15:49 msl2025.com gunicorn[19645]: [2025-05-12 10:15:49 +0100] [19645] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:49 msl2025.com gunicorn[19645]: [2025-05-12 10:15:49 +0100] [19645] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:50 msl2025.com gunicorn[19645]: [2025-05-12 10:15:50 +0100] [19645] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:50 msl2025.com gunicorn[19645]: [2025-05-12 10:15:50 +0100] [19645] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:51 msl2025.com gunicorn[19645]: [2025-05-12 10:15:51 +0100] [19645] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:51 msl2025.com gunicorn[19645]: [2025-05-12 10:15:51 +0100] [19645] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:52 msl2025.com gunicorn[19645]: [2025-05-12 10:15:52 +0100] [19645] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:52 msl2025.com gunicorn[19645]: [2025-05-12 10:15:52 +0100] [19645] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:53 msl2025.com gunicorn[19645]: [2025-05-12 10:15:53 +0100] [19645] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:53 msl2025.com gunicorn[19645]: [2025-05-12 10:15:53 +0100] [19645] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:54 msl2025.com gunicorn[19645]: [2025-05-12 10:15:54 +0100] [19645] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:15:54 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:15:54 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:15:54 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 3.
+May 12 10:15:54 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:15:54 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:15:54 msl2025.com gunicorn[19661]: [2025-05-12 10:15:54 +0100] [19661] [INFO] Starting gunicorn 23.0.0
+May 12 10:15:54 msl2025.com gunicorn[19661]: [2025-05-12 10:15:54 +0100] [19661] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:54 msl2025.com gunicorn[19661]: [2025-05-12 10:15:54 +0100] [19661] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:55 msl2025.com gunicorn[19661]: [2025-05-12 10:15:55 +0100] [19661] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:55 msl2025.com gunicorn[19661]: [2025-05-12 10:15:55 +0100] [19661] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:56 msl2025.com gunicorn[19661]: [2025-05-12 10:15:56 +0100] [19661] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:56 msl2025.com gunicorn[19661]: [2025-05-12 10:15:56 +0100] [19661] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:57 msl2025.com gunicorn[19661]: [2025-05-12 10:15:57 +0100] [19661] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:57 msl2025.com gunicorn[19661]: [2025-05-12 10:15:57 +0100] [19661] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:58 msl2025.com gunicorn[19661]: [2025-05-12 10:15:58 +0100] [19661] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:58 msl2025.com gunicorn[19661]: [2025-05-12 10:15:58 +0100] [19661] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:15:59 msl2025.com gunicorn[19661]: [2025-05-12 10:15:59 +0100] [19661] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:15:59 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:15:59 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:15:59 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 4.
+May 12 10:15:59 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:15:59 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:15:59 msl2025.com gunicorn[19675]: [2025-05-12 10:15:59 +0100] [19675] [INFO] Starting gunicorn 23.0.0
+May 12 10:15:59 msl2025.com gunicorn[19675]: [2025-05-12 10:15:59 +0100] [19675] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:15:59 msl2025.com gunicorn[19675]: [2025-05-12 10:15:59 +0100] [19675] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:00 msl2025.com gunicorn[19675]: [2025-05-12 10:16:00 +0100] [19675] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:00 msl2025.com gunicorn[19675]: [2025-05-12 10:16:00 +0100] [19675] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:01 msl2025.com gunicorn[19675]: [2025-05-12 10:16:01 +0100] [19675] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:01 msl2025.com gunicorn[19675]: [2025-05-12 10:16:01 +0100] [19675] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:02 msl2025.com gunicorn[19675]: [2025-05-12 10:16:02 +0100] [19675] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:02 msl2025.com gunicorn[19675]: [2025-05-12 10:16:02 +0100] [19675] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:03 msl2025.com gunicorn[19675]: [2025-05-12 10:16:03 +0100] [19675] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:03 msl2025.com gunicorn[19675]: [2025-05-12 10:16:03 +0100] [19675] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:04 msl2025.com gunicorn[19675]: [2025-05-12 10:16:04 +0100] [19675] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:16:04 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:16:04 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:16:04 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 5.
+May 12 10:16:04 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:16:04 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:16:04 msl2025.com gunicorn[19689]: [2025-05-12 10:16:04 +0100] [19689] [INFO] Starting gunicorn 23.0.0
+May 12 10:16:04 msl2025.com gunicorn[19689]: [2025-05-12 10:16:04 +0100] [19689] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:04 msl2025.com gunicorn[19689]: [2025-05-12 10:16:04 +0100] [19689] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:05 msl2025.com gunicorn[19689]: [2025-05-12 10:16:05 +0100] [19689] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:05 msl2025.com gunicorn[19689]: [2025-05-12 10:16:05 +0100] [19689] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:06 msl2025.com gunicorn[19689]: [2025-05-12 10:16:06 +0100] [19689] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:06 msl2025.com gunicorn[19689]: [2025-05-12 10:16:06 +0100] [19689] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:07 msl2025.com gunicorn[19689]: [2025-05-12 10:16:07 +0100] [19689] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:07 msl2025.com gunicorn[19689]: [2025-05-12 10:16:07 +0100] [19689] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:08 msl2025.com gunicorn[19689]: [2025-05-12 10:16:08 +0100] [19689] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:08 msl2025.com gunicorn[19689]: [2025-05-12 10:16:08 +0100] [19689] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:09 msl2025.com gunicorn[19689]: [2025-05-12 10:16:09 +0100] [19689] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:16:09 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:16:09 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:16:10 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 6.
+May 12 10:16:10 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:16:10 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:16:10 msl2025.com gunicorn[19705]: [2025-05-12 10:16:10 +0100] [19705] [INFO] Starting gunicorn 23.0.0
+May 12 10:16:10 msl2025.com gunicorn[19705]: [2025-05-12 10:16:10 +0100] [19705] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:10 msl2025.com gunicorn[19705]: [2025-05-12 10:16:10 +0100] [19705] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:11 msl2025.com gunicorn[19705]: [2025-05-12 10:16:11 +0100] [19705] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:11 msl2025.com gunicorn[19705]: [2025-05-12 10:16:11 +0100] [19705] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:12 msl2025.com gunicorn[19705]: [2025-05-12 10:16:12 +0100] [19705] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:12 msl2025.com gunicorn[19705]: [2025-05-12 10:16:12 +0100] [19705] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:13 msl2025.com gunicorn[19705]: [2025-05-12 10:16:13 +0100] [19705] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:13 msl2025.com gunicorn[19705]: [2025-05-12 10:16:13 +0100] [19705] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:14 msl2025.com gunicorn[19705]: [2025-05-12 10:16:14 +0100] [19705] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:14 msl2025.com gunicorn[19705]: [2025-05-12 10:16:14 +0100] [19705] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:15 msl2025.com gunicorn[19705]: [2025-05-12 10:16:15 +0100] [19705] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:16:15 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:16:15 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:16:15 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 7.
+May 12 10:16:15 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:16:15 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:16:15 msl2025.com gunicorn[19717]: [2025-05-12 10:16:15 +0100] [19717] [INFO] Starting gunicorn 23.0.0
+May 12 10:16:15 msl2025.com gunicorn[19717]: [2025-05-12 10:16:15 +0100] [19717] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:15 msl2025.com gunicorn[19717]: [2025-05-12 10:16:15 +0100] [19717] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:16 msl2025.com gunicorn[19717]: [2025-05-12 10:16:16 +0100] [19717] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:16 msl2025.com gunicorn[19717]: [2025-05-12 10:16:16 +0100] [19717] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:17 msl2025.com gunicorn[19717]: [2025-05-12 10:16:17 +0100] [19717] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:17 msl2025.com gunicorn[19717]: [2025-05-12 10:16:17 +0100] [19717] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:18 msl2025.com gunicorn[19717]: [2025-05-12 10:16:18 +0100] [19717] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:18 msl2025.com gunicorn[19717]: [2025-05-12 10:16:18 +0100] [19717] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:19 msl2025.com gunicorn[19717]: [2025-05-12 10:16:19 +0100] [19717] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:19 msl2025.com gunicorn[19717]: [2025-05-12 10:16:19 +0100] [19717] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:20 msl2025.com gunicorn[19717]: [2025-05-12 10:16:20 +0100] [19717] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:16:20 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:16:20 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:16:20 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 8.
+May 12 10:16:20 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:16:20 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:16:20 msl2025.com gunicorn[19731]: [2025-05-12 10:16:20 +0100] [19731] [INFO] Starting gunicorn 23.0.0
+May 12 10:16:20 msl2025.com gunicorn[19731]: [2025-05-12 10:16:20 +0100] [19731] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:20 msl2025.com gunicorn[19731]: [2025-05-12 10:16:20 +0100] [19731] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:21 msl2025.com gunicorn[19731]: [2025-05-12 10:16:21 +0100] [19731] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:21 msl2025.com gunicorn[19731]: [2025-05-12 10:16:21 +0100] [19731] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:22 msl2025.com gunicorn[19731]: [2025-05-12 10:16:22 +0100] [19731] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:22 msl2025.com gunicorn[19731]: [2025-05-12 10:16:22 +0100] [19731] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:23 msl2025.com gunicorn[19731]: [2025-05-12 10:16:23 +0100] [19731] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:23 msl2025.com gunicorn[19731]: [2025-05-12 10:16:23 +0100] [19731] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:24 msl2025.com gunicorn[19731]: [2025-05-12 10:16:24 +0100] [19731] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:24 msl2025.com gunicorn[19731]: [2025-05-12 10:16:24 +0100] [19731] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
+May 12 10:16:25 msl2025.com gunicorn[19731]: [2025-05-12 10:16:25 +0100] [19731] [ERROR] Can't connect to ('0.0.0.0', 8000)
+May 12 10:16:25 msl2025.com systemd[1]: [0;1;39m[0;1;31m[0;1;39mgunicorn.service: Main process exited, code=exited, status=1/FAILURE[0m
+May 12 10:16:25 msl2025.com systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgunicorn.service: Failed with result 'exit-code'.[0m
+May 12 10:16:25 msl2025.com systemd[1]: gunicorn.service: Scheduled restart job, restart counter is at 9.
+May 12 10:16:25 msl2025.com systemd[1]: Stopped Gunicorn service for Restaurant Map.
+May 12 10:16:25 msl2025.com systemd[1]: Started Gunicorn service for Restaurant Map.
+May 12 10:16:25 msl2025.com gunicorn[19745]: [2025-05-12 10:16:25 +0100] [19745] [INFO] Starting gunicorn 23.0.0
+May 12 10:16:25 msl2025.com gunicorn[19745]: [2025-05-12 10:16:25 +0100] [19745] [ERROR] Connection in use: ('0.0.0.0', 8000)
+May 12 10:16:25 msl2025.com gunicorn[19745]: [2025-05-12 10:16:25 +0100] [19745] [ERROR] connection to ('0.0.0.0', 8000) failed: [Errno 98] Address already in use
