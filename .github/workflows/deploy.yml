@@ -3,33 +3,21 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - master  # Запускать workflow только при пуше в ветку master
+      - main  # Замените на вашу рабочую ветку
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      # Шаг 1: Checkout кода
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Шаг 2: Установка SSH-ключа
-      - name: Set up SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan 5.35.125.204 >> ~/.ssh/known_hosts
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # Шаг 3: Подключение к серверу и обновление репозитория
       - name: Deploy to server
         run: |
-          ssh root@5.35.125.204 <<EOF
-          cd /var/www/restaurant-map/restaurant-map
-          git pull origin master
-          source venv/bin/activate
-          pip install -r requirements.txt
-          python server.py  # Запуск вашего Python-скрипта
-          sudo systemctl restart gunicorn
-          EOF
+          ssh user@your-server "cd /path/to/your/project && git pull origin main && npm install && npm run build"
