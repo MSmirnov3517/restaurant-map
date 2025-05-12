@@ -8,6 +8,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
+app.config['JSON_AS_ASCII'] = False
 #Строка для теста. часть тертья
 # Настройка логирования
 logging.basicConfig(
@@ -25,7 +26,7 @@ try:
         config = json.load(config_file)
 except FileNotFoundError:
     logging.error("Файл config.json не найден")
-    config = {"file_path": "restaurants.xlsx"}
+    config = {"file_path": "restaurants1.xlsx"}
 
 def safe_date_conversion(df, col):
     """
@@ -64,10 +65,10 @@ def read_excel_data(file_path):
 @app.route('/api/restaurants')
 def get_restaurants():
     """
-    Возвращает данные из restaurants.xlsx в формате JSON.
+    Возвращает данные из restaurants1.xlsx в формате JSON.
     """
     try:
-        file_path = config.get('file_path', 'restaurants.xlsx')
+        file_path = config.get('file_path', 'restaurants1.xlsx')
         df = read_excel_data(file_path)
         if df is None:
             return jsonify({'error': f'Не удалось прочитать файл {file_path}'}), 500
