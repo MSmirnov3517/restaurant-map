@@ -20,7 +20,7 @@ logging.basicConfig(
     ]
 )
 
-# Конфигурация из файла
+# Конфигурация из файла. Тест
 try:
     with open('config.json', encoding='utf-8') as config_file:
         config = json.load(config_file)
